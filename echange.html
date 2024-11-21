@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espace d'Échange de Cartes</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Ajoutez un peu de style pour voir les cartes */
+        .card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            width: 150px;
+            text-align: center;
+        }
+        #characterGrid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
 </head>
 <body>
-    <select id="characterSelect">
-        <option value="">Sélectionnez un personnage</option>
-    </select>
     <div class="container">
         <header>
             <h1>Espace d'Échange de Cartes</h1>
@@ -21,6 +33,10 @@
                 <a href="login.html">connexion</a>
             </nav>
         </header>
+
+        <select id="characterSelect">
+            <option value="">Sélectionnez un personnage</option>
+        </select>
 
         <div class="carousel">
             <button id="prevButton">Précédent</button>
@@ -54,44 +70,14 @@
             <div id="characterGrid" class="character-grid">
                 <!-- Les cartes de personnages seront ajoutées ici dynamiquement -->
             </div>
-        </main><!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personnages Harry Potter</title>
-    <style>
-        /* Ajoutez un peu de style pour voir les cartes */
-        .card {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 10px;
-            display: inline-block;
-            width: 150px;
-            text-align: center;
-        }
-        #characterGrid {
-            display: flex;
-            flex-wrap: wrap;
-        }
-    </style>
-</head>
-<body>
-    <div id="characterCard" style="display:none;"></div>
-    <div id="characterGrid" class="character-grid"></div>
-    <select id="characterSelect"></select>
-    <button id="prevButton">Précédent</button>
-    <button id="nextButton">Suivant</button>
-
-    <script src="script.js"></script> <!-- Assurez-vous que le chemin est correct -->
-</body>
-</html>
+        </main>
 
         <footer>
             <p>&copy; 2023 Mon Site. Tous droits réservés.</p>
         </footer>
     </div>
 
+    <script src="script.js"></script> <!-- Assurez-vous que le chemin est correct -->
     <script src="main.js"></script> <!-- Assurez-vous que le fichier JavaScript est correctement lié -->
 </body>
 </html>
