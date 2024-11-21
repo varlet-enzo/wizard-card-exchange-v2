@@ -1,0 +1,128 @@
+:root {
+  --background-color: rgba(0, 0, 0, 0.8); /* Fond sombre pour le thème */
+  --link-color: #f9c74f; /* Jaune Poudlard */
+  --link-hover-color: #f94144; /* Rouge Gryffondor */
+  --card-background: rgba(255, 255, 255, 0.9);
+  --sidebar-background: rgba(0, 0, 0, 0.7); /* Fond sombre pour la sidebar */
+  --border-color: #d9d9d9; /* Couleur claire pour les bordures */
+}
+
+body {
+  background: url('background-harry-potter.jpg') no-repeat center center fixed; /* Image d'arrière-plan inspirée de Harry Potter */
+  background-size: cover;
+  overflow-x: hidden;
+  display: grid;
+  font-family: 'Garamond', serif; /* Police inspirée du style médiéval */
+  margin: 0;
+  padding: 0;
+  color: #f9f9f9; /* Couleur de texte claire pour le contraste */
+}
+
+/* Conteneur de cartes */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+  grid-template-rows: repeat(3, 1fr); /* 3 lignes */
+  grid-gap: 20px; /* Espacement entre les cartes */
+  margin: 100px auto; /* Centrer le conteneur avec une marge automatique */
+  max-width: 1200px; /* Limiter la largeur maximale pour un meilleur centrage */
+}
+
+.card-booster {
+  display: grid; /* Utiliser le modèle de grille */
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+  grid-gap: 20px; /* Espacement entre les cartes */
+  margin: 170px auto; /* Augmenter la marge supérieure pour le déplacer plus bas */
+  max-width: 1200px; /* Limiter la largeur maximale pour un meilleur centrage */
+  justify-items: center; /* Centrer les éléments horizontalement */
+  align-items: center; /* Centrer les éléments verticalement */
+}
+
+/* Styles des cartes */
+.card {
+  background-color: var(--card-background);
+  border-radius: 12px; /* Coins plus arrondis */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Ombre plus marquée */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7); /* Ombre plus marquée au survol */
+}
+
+/* Conteneur d'en-tête */
+.tete {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styles des liens */
+.lien a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.lien a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Positionnement de la barre de liens */
+.lien {
+  font-size: x-large;
+  position: absolute;
+  right: 610px;
+  top: 5px;
+  z-index: 7;
+}
+
+/* Logo */
+.logo {
+  position: absolute;
+  top: 1px;
+  left: 10px;
+  width: 23%;
+  height: 100px;
+  margin-left: -20px;
+  z-index: 2;
+}
+
+/* Styles des images */
+.block img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Bloc */
+.block {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 100%;
+  height: 300px !important;
+  opacity: 0.9; /* Plus opaque pour un meilleur contraste */
+}
+
+.sommaire {
+  position: fixed; /* Changez la position à fixed */
+  top: 0; /* Positionnez-le en haut */
+  left: 0; /* Alignez-le à gauche */
+  width: 200px; /* Largeur du sommaire */
+  height: 100vh; /* Hauteur de la fenêtre */
+  background-color: var(--sidebar-background);
+  padding: 20px; /* Ajoutez du remplissage */
+  padding-top: 50px; /* Ajoutez du remplissage en haut pour abaisser le texte */
+  border-right: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+  z-index: 5; /* Assurez-vous qu'il soit au-dessus des autres éléments */
+}
+
+/* Styles pour les tablettes */
+@media (min-width: 768px) and (max-width: 1199px) {
+}

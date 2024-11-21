@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace d'Échange de Cartes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <select id="characterSelect">
+        <option value="">Sélectionnez un personnage</option>
+    </select>
+    <div class="container">
+        <header>
+            <h1>Espace d'Échange de Cartes</h1>
+            <nav class="lien">
+                <a href="collection.html">Ma Collection</a>
+                <span>|</span>
+                <a href="index.html">Accueil</a>
+                <span>|</span>
+                <a href="login.html">connexion</a>
+            </nav>
+        </header>
+
+        <div class="carousel">
+            <button id="prevButton">Précédent</button>
+            <div id="characterCard" class="card" style="display: none;"></div>
+            <button id="nextButton">Suivant</button>
+        </div>
+
+        <main class="exchange-section">
+            <h2>Proposez vos Cartes à Échanger</h2>
+            <form id="exchangeForm">
+                <label for="cardName">Nom de la Carte :</label>
+                <input type="text" id="cardName" required>
+                
+                <label for="cardDescription">Description :</label>
+                <textarea id="cardDescription" required></textarea>
+                
+                <button type="submit">Proposer un Échange</button>
+            </form>
+        
+            <h2>Ma Collection de Cartes</h2>
+            <div class="my-collection" id="myCollection">
+                <!-- Les cartes de votre collection seront ajoutées ici dynamiquement -->
+            </div>
+        
+            <h2>Offres d'Échange Disponibles</h2>
+            <div class="exchange-offers" id="exchangeOffers">
+                <!-- Les offres d'échange seront ajoutées ici dynamiquement -->
+            </div>
+        
+            <h2>Personnages</h2>
+            <div id="characterGrid" class="character-grid">
+                <!-- Les cartes de personnages seront ajoutées ici dynamiquement -->
+            </div>
+        </main><!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personnages Harry Potter</title>
+    <style>
+        /* Ajoutez un peu de style pour voir les cartes */
+        .card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            width: 150px;
+            text-align: center;
+        }
+        #characterGrid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div id="characterCard" style="display:none;"></div>
+    <div id="characterGrid" class="character-grid"></div>
+    <select id="characterSelect"></select>
+    <button id="prevButton">Précédent</button>
+    <button id="nextButton">Suivant</button>
+
+    <script src="script.js"></script> <!-- Assurez-vous que le chemin est correct -->
+</body>
+</html>
+
+        <footer>
+            <p>&copy; 2023 Mon Site. Tous droits réservés.</p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script> <!-- Assurez-vous que le fichier JavaScript est correctement lié -->
+</body>
+</html>

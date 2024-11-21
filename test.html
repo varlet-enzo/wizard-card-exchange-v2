@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter Characters</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Harry Potter Characters</h1>
+    </header>
+    <main>
+        <div id="characterSelectContainer">
+            <label for="characterSelect">Choisissez un personnage:</label>
+            <select id="characterSelect" onchange="handleCharacterSelect(event)"></select>
+        </div>
+        <div id="characterCard"></div>
+        <div id="characterGrid"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

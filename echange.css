@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex; /* Utilisez flexbox pour le corps */
+    flex-direction: column; /* Aligne les enfants en colonne */
+    min-height: 100vh; /* Prend au moins toute la hauteur de la fenêtre */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Permet à cette section de prendre l'espace restant */
+}
+
+header {
+    background-color: #4CAF50; /* Couleur de fond du header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.lien a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.exchange-section {
+    flex: 1; /* Permet à cette section de prendre l'espace restant */
+    padding: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.exchange-offers {
+    margin-top: 20px;
+}
+
+.my-collection {
+    margin-top: 20px;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    gap: 20px; /* Espace entre les cartes */
+    margin-top: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card h3 {
+    margin: 0;
+}
+
+.offer {
+    background-color: white;
+    padding: 10px;
+}

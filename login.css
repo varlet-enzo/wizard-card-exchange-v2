@@ -1,0 +1,82 @@
+body {
+    font-family: 'Playfair Display', serif; /* A font reminiscent of ancient tomes */
+    background-image: url('https://i.imgur.com/Ei4Thaf.jpeg'); /* A Hogwarts-inspired background image */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #8B4513; /* A warm, golden color reminiscent of Hogwarts' crest */
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+form {
+    background-color: #F5F5F5; /* A light, parchment-like color */
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* A subtle shadow to give it a sense of depth */
+    padding: 30px;
+    max-width: 400px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #8B4513; /* Same warm, golden color as the h1 */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #666; /* A dark, muted border color */
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #8B4513; /* Same warm, golden color as the h1 */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* A subtle shadow to indicate focus */
+    outline: none;
+}
+
+button {
+    background-color: #8B4513; /* Same warm, golden color as the h1 */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #663300; /* A darker, richer version of the golden color */
+    transform: translateY(-2px);
+}
+
+.message {
+    text-align: center; 
+    margin-top: 20px;
+}
+
+.success {
+    color: #2E865F; /* A muted, earthy green color reminiscent of the Hogwarts' grounds */
+}
+
+.error {
+    color: #FFC080; /* A warm, fiery color reminiscent of the Weasley's wildfire whiskey */
+}
