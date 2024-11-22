@@ -6,6 +6,7 @@
     <title>Création de Compte</title>
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <link rel="icon" href="iconp.png">
     <style>
         .valid {
             border: 2px solid green;
@@ -28,7 +29,11 @@
 <body>
 
 <header>
-    <button id="toggle-dark-mode">Activer/Désactiver le mode sombre</button>
+    <div id="darkModeToggle">
+        <span id="icon" class="icon-sun"></span> <!-- Icône du soleil par défaut -->
+    </div>
+        </a>
+      </div>
     <h1>Création de Compte</h1>
     <nav class="lien">
         <a href="collection.html">Ma Collection</a>
@@ -44,7 +49,7 @@
     <input type="text" id="pseudo" name="pseudo" minlength="6" required class="form-input"><br><br>
 
     <label for="email">Email :</label>
-    <input type="email" id="email" name="email" required class="form-input"><br><br>
+    <input type="email" id="email" name="email" required class="form-input email-input">
 
     <label for="mdp">Mot de passe (minimum 8 caractères) :</label>
     <input type="password" id="mdp" name="mdp" minlength="8" required class="form-input"><br><br>
@@ -57,7 +62,7 @@
     </div>
 
     <div class="captcha">
-        <label for="captcha-input">Entrer le captcha :</label>
+        <label for="captcha-form">Entrer le captcha :</label>
         <div class="preview"></div>
         <div class="captcha-form">
             <input type="text" id="captcha-form" placeholder="Entrer le texte du captcha" class="form-input">

@@ -55,21 +55,33 @@ function populateCharacterSelect() {
     });
 }
 
-    const toggleButton = document.getElementById('toggle-dark-mode');
-    const body = document.body;
-
-    // Vérifier si le mode sombre est déjà activé
-    if (localStorage.getItem('dark-mode') === 'enabled') {
-        body.classList.add('dark-mode');
-    }
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('darkModeToggle');
+    const icon = document.getElementById('icon');
 
     toggleButton.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-
-        // Enregistrer l'état dans localStorage
-        if (body.classList.contains('dark-mode')) {
-            localStorage.setItem('dark-mode', 'enabled');
+        console.log('Bouton cliqué'); // Pour le débogage
+        if (icon.classList.contains('icon-sun')) {
+            icon.classList.remove('icon-sun');
+            icon.classList.add('icon-moon');
+            document.body.classList.add('dark-mode'); // Active le mode sombre
         } else {
-            localStorage.setItem('dark-mode', 'disabled');
+            icon.classList.remove('icon-moon');
+            icon.classList.add('icon-sun');
+            document.body.classList.remove('dark-mode'); // Désactive le mode sombre
         }
     });
+});
+
+toggleButton.addEventListener('click', () => {
+    console.log('Bouton cliqué'); // Ajoutez ceci pour le débogage
+    if (icon.classList.contains('icon-sun')) {
+        icon.classList.remove('icon-sun');
+        icon.classList.add('icon-moon');
+        document.body.classList.add('dark-mode');
+    } else {
+        icon.classList.remove('icon-moon');
+        icon.classList.add('icon-sun');
+        document.body.classList.remove('dark-mode');
+    }
+});

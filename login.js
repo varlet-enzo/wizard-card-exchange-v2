@@ -119,33 +119,20 @@ document.addEventListener('DOMContentLoaded', function() {
             this.textContent = 'Afficher';
         }
     });
-
-    document.getElementById('toggleMdpConfirm').addEventListener('click', function() {
-        const mdpConfirmInput = document.getElementById('mdpConfirm');
-        if (mdpConfirmInput.type === 'password') {
-            mdpConfirmInput.type = 'text';
-            this.textContent = 'Masquer';
-        } else {
-            mdpConfirmInput.type = 'password';
-            this.textContent = 'Afficher';
-        }
-    });
 });
 
 
-const toggleButton = document.getElementById('toggle-dark-mode');
-const body = document.body;
-const formInputs = document.querySelectorAll('.form-input');
+const toggleButton = document.getElementById('darkModeToggle');
+const icon = document.getElementById('icon');
 
 toggleButton.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    formInputs.forEach(input => {
-        input.classList.toggle('dark-mode');
-    });
+    if (icon.classList.contains('icon-sun')) {
+        icon.classList.remove('icon-sun');
+        icon.classList.add('icon-moon');
+        document.body.classList.add('dark-mode'); // Active le mode sombre
+    } else {
+        icon.classList.remove('icon-moon');
+        icon.classList.add('icon-sun');
+        document.body.classList.remove('dark-mode'); // Désactive le mode sombre
+    }
 });
-
-function validateForm() {
-    // Votre logique de validation ici
-    const messageDiv = document.getElementById('message');
-    messageDiv.textContent = "Formulaire soumis !"; // Exemple de message
-}

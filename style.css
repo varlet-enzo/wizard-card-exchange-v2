@@ -18,7 +18,7 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  color: #f9f9
+  color: #D1A24A; /* Une couleur dorée pour rappeler les couleurs des maisons */
 }
 
 body.dark-mode {
@@ -81,43 +81,58 @@ header .dark-mode #toggle-dark-mode {
 
 /* Conteneur d'en-tête */
 .tete {
+  position: relative; /* Pour que les éléments enfants soient positionnés par rapport à ce conteneur */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 
+.search-form {
+  position: relative; /* Permet de positionner le formulaire de recherche */
+  top: 10px; /* Ajustez cette valeur pour la position verticale */
+  left: 10px; /* Ajustez cette valeur pour la position horizontale */
+  z-index: 100; /* Assurez-vous qu'il soit au-dessus des autres éléments */
+}
+
+.search-form input {
+  padding: 5px; /* Ajoutez un peu d'espacement interne */
+  border: 1px solid #ccc; /* Bordure légère */
+  border-radius: 5px; /* Coins arrondis */
+}
 
 .lien {
+  position: relative;
   font-size: x-large;
   text-decoration: none;
-  color: #000;
-  background-color: aqua;
+  color: #C9B9A5; /* Une couleur beige clair pour un look vintage */
+  background-color: #7F3F3F; /* Un rouge foncé pour rappeler Gryffondor */
   padding: 10px 20px;
+  margin-top: -1%;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 0;
 }
 
 .lien a {
-  color: var(--link-color);
+  color: #F9C74F; /* Jaune doré pour un contraste avec le fond */
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .lien a:hover {
-  color: var(--link-hover-color);
+  color: #F94144; /* Rouge vif au survol pour attirer l'attention */
 }
 
-/* Logo */
 .logo {
-  position: absolute;
+  position: fixed;
   top: 1px;
   left: 10px;
   width: 23%;
   height: 100px;
   margin-left: -20px;
-  z-index: 3;
+  z-index: 7;
 }
 
 /* Styles des images */
@@ -154,17 +169,75 @@ header .dark-mode #toggle-dark-mode {
   height: 100vh; /* Hauteur de la fenêtre */
   background-color: var(--sidebar-background);
   padding: 10px; /* Réduire le remplissage */
-  padding-top: 10%; /* Réduire le remplissage en haut pour abaisser le texte */
+  padding-top: 13%; /* Réduire le remplissage en haut pour abaisser le texte */
   border-right: 2px solid var(--border-color);
   border-bottom: 2px solid var(--border-color);
   z-index: 0; /* Assurez-vous qu'il soit au-dessus des autres éléments */
   font-size: 0.9em; /* Réduire la taille de la police */
 }
+
+/* Styles pour le bouton de changement de mode sombre */
 #toggle-dark-mode {
-  display: block ;
-  position: relative ;
+  display: block;
+  position: relative; /* ou relative selon vos besoins */
+  top: 1%; /* Ajustez cette valeur pour la position verticale */
+  left: 15%; /* Ajustez cette valeur pour la position horizontale */
   z-index: 99;
+  width: 40px; /* Ajustez la taille selon vos besoins */
+  height: 40px; /* Ajustez la taille selon vos besoins */
+  background-color: transparent; /* Fond transparent pour le bouton */
+  border: none; /* Pas de bordure */
+  cursor: pointer; /* Curseur en main */
 }
+
+.icon-sun {
+  background-image: url('soleil.png'); /* Assurez-vous que le chemin est correct */
+  width: 40px; /* Ajustez selon vos besoins */
+  height: 40px;
+  background-size: contain;
+  display: inline-block;
+}
+
+.icon-moon {
+  background-image: url('icone-de-la-lune.png'); /* Assurez-vous que le chemin est correct */
+  width: 40px; /* Ajustez selon vos besoins */
+  height: 40px;
+  background-size: contain;
+  display: none; /* Caché par défaut */
+}
+
+.icon-sun, .icon-moon {
+  background-repeat: no-repeat;
+  width: 40px; /* Ajustez la taille selon vos besoins */
+  height: 40px; /* Ajustez la taille selon vos besoins */
+  background-size: contain; /* Ajuste la taille de l'image */
+  display: inline-block; /* Assurez-vous qu'elles s'affichent en ligne */
+  z-index: 4;
+}
+
+body.dark-mode .icon-sun {
+  display: none; /* Masquer l'icône du soleil en mode sombre */
+}
+
+body.dark-mode .icon-moon {
+  display: inline-block; /* Afficher l'icône de la lune en mode sombre */
+}
+
+#darkModeToggle {
+  cursor: pointer;
+  position: relative; /* Position relative pour le conteneur */
+  display: inline-block; /* Permet aux éléments de s'afficher en ligne */
+}
+
+#darkModeToggle #icon {
+  position: absolute; /* Position absolue pour superposer l'icône */
+  top: 0; /* Ajustez selon vos besoins */
+  left: 230px; /* Ajustez selon vos besoins */
+  width: 40px; /* Ajustez selon vos besoins */
+  height: 40px; /* Ajustez selon vos besoins */
+  background-size: contain; /* Assurez-vous que l'image s'ajuste */
+}
+
 /* Styles pour les tablettes */
 @media (min-width: 768px) and (max-width: 1199px) {
 }

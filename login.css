@@ -1,16 +1,42 @@
 /* Styles par défaut (mode clair) */
 body {
-    font-family: 'Playfair Display', serif; /* A font reminiscent of ancient tomes */
-    background-image: url('https://i.imgur.com/Ei4Thaf.jpeg'); /* A Hogwarts-inspired background image */
+    font-family: 'Playfair Display', serif; /* Police inspirée des anciens tomes */
+    background-image: url('https://i.imgur.com/Ei4Thaf.jpeg'); /* Image de fond inspirée de Poudlard */
     background-size: cover;
     background-position: center;
     margin: 0;
     padding: 20px;
 }
 
+.email-input {
+    margin-bottom: 20px; /* Ajustez la valeur selon vos besoins */
+}
+
+.lien {
+    position: relative;
+    font-size: x-large;
+    text-decoration: none;
+    color: #C9B9A5; /* Couleur beige clair pour un look vintage */
+    background-color: #423f7f; /* Rouge foncé pour rappeler Gryffondor */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lien a {
+    color: #F9C74F; /* Jaune doré pour un contraste avec le fond */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.lien a:hover {
+    color: #F94144; /* Rouge vif au survol */
+}
+
 h1 {
     text-align: center;
-    color: #8B4513; /* A warm, golden color reminiscent of Hogwarts' crest */
+    color: #8B4513; /* Couleur chaude, dorée */
     margin-bottom: 20px;
     font-size: 36px;
     font-weight: bold;
@@ -18,9 +44,9 @@ h1 {
 }
 
 form {
-    background-color: #F5F5F5; /* A light, parchment-like color */
+    background-color: #F5F5F5; /* Couleur claire, semblable au parchemin */
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* A subtle shadow to give it a sense of depth */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     padding: 30px;
     max-width: 400px;
     margin: auto;
@@ -30,7 +56,7 @@ label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #8B4513; /* Same warm, golden color as the h1 */
+    color: #8B4513; /* Couleur chaude, dorée */
 }
 
 input[type="text"],
@@ -39,7 +65,7 @@ input[type="password"] {
     width: 94%;
     padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #666; /* A dark, muted border color */
+    border: 1px solid #666;
     border-radius: 4px;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
@@ -47,13 +73,13 @@ input[type="password"] {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
-    border-color: #8B4513; /* Same warm, golden color as the h1 */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* A subtle shadow to indicate focus */
+    border-color: #8B4513;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     outline: none;
 }
 
 button {
-    background-color: #8B4513; /* Same warm, golden color as the h1 */
+    background-color: #8B4513; /* Couleur chaude, dorée */
     color: white;
     padding: 12px;
     border: none;
@@ -65,7 +91,7 @@ button {
 }
 
 button:hover {
-    background-color: #663300; /* A darker, richer version of the golden color */
+    background-color: #663300; /* Une version plus sombre de la couleur */
     transform: translateY(-2px);
 }
 
@@ -75,16 +101,16 @@ button:hover {
 }
 
 .success {
-    color: #2E865F; /* A muted, earthy green color reminiscent of the Hogwarts' grounds */
+    color: #2E865F; /* Vert terreux */
 }
 
 .error {
-    color: #FFC080; /* A warm, fiery color reminiscent of the Weasley's wildfire whiskey */
+    color: #FFC080; /* Couleur chaude, rappelant le whiskey des Weasley */
 }
 
 /* Styles pour le mode sombre */
 body.dark-mode {
-    background-image: none; /* Supprimez l'image de fond pour le mode sombre */
+    background-image: none; /* Supprime l'image de fond */
     background-color: #121212; /* Couleur de fond sombre */
 }
 
@@ -100,10 +126,36 @@ input[type="text"].dark-mode,
 input[type="email"].dark-mode,
 input[type="password"].dark-mode {
     background-color: #444; /* Couleur sombre pour les champs de saisie */
-    color: #F5F5F5; /* Couleur claire pour le texte */
+    color: #F5F5F5; /* Couleur claire pour*/
 }
 
-button.dark-mode {
-    background-color: #8B4513; /* Couleur du bouton pour le mode sombre */
-    color: white;
+.icon-sun {
+    background-image: url('soleil.png'); /* Assurez-vous que le chemin est correct */
+    width: 40px; /* Ajustez selon vos besoins */
+    height: 40px;
+    background-size: contain;
+    display: inline-block;
+}
+
+.icon-moon {
+    background-image: url('icone-de-la-lune.png'); /* Assurez-vous que le chemin est correct */
+    width: 40px; /* Ajustez selon vos besoins */
+    height: 40px;
+    background-size: contain;
+    display: none; /* Caché par défaut */
+}
+
+.icon-sun, .icon-moon {
+    width: 40px; /* Ajustez la taille selon vos besoins */
+    height: 40px; /* Ajustez la taille selon vos besoins */
+    background-size: contain; /* Ajuste la taille de l'image */
+    display: inline-block; /* Assurez-vous qu'elles s'affichent en ligne */
+}
+
+body.dark-mode .icon-sun {
+    display: none; /* Masquer l'icône du soleil en mode sombre */
+}
+
+body.dark-mode .icon-moon {
+    display: inline-block; /* Afficher l'icône de la lune en mode sombre */
 }

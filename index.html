@@ -9,7 +9,9 @@
 </head>
 <body>
     <header>
-        <button id="toggle-dark-mode">Activer/Désactiver le mode sombre</button>
+        <div id="darkModeToggle">
+            <span id="icon" class="icon-sun"></span> <!-- Icône du soleil par défaut -->
+        </div>
         <section class="tete">
             <div class="logo">
                 <img src="logo site.png" alt="Logo du site" width="220" height="200">
@@ -21,15 +23,15 @@
                 </form>
             </div>
         </section>
-        <nav class="lien">
+        <div class="lien">
             <a href="collection.html">Ma collection</a>
-            <span>|</span>
+            <span> | </span>
             <a href="echange.html">Échange</a>
-            <span>|</span>
+            <span> | </span>
             <a href="index.html">Accueil</a>
-            <span>|</span>
+            <span> | </span>
             <a href="login.html">connexion</a>
-        </nav>
+        </div>
         <div class="sommaire">
             <h2>Sommaire</h2>
             <ul>
@@ -81,5 +83,6 @@
             </div>
         </div>
     </main>
+    <script src="main.js"></script>
 </body>
 </html>
