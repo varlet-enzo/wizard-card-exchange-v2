@@ -11,6 +11,7 @@
 
 body {
   background: url('background-harry-potter.jpg') no-repeat center center fixed;
+  backdrop-filter: blur(3px);
   background-size: cover;
   overflow-x: hidden;
   display: grid;
@@ -41,7 +42,7 @@ body.dark-mode .booster {
   border: 1px solid #333; /* Couleur de la bordure des boosters */
 }
 
-header .dark-mode .toggle-dark-mode {
+header .dark-mode #toggle-dark-mode {
   z-index: 8;
 }
 
@@ -86,7 +87,18 @@ header .dark-mode .toggle-dark-mode {
   align-items: center;
 }
 
-/* Styles des liens */
+
+.lien {
+  font-size: x-large;
+  text-decoration: none;
+  color: #000;
+  background-color: aqua;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .lien a {
   color: var(--link-color);
   text-decoration: none;
@@ -95,15 +107,6 @@ header .dark-mode .toggle-dark-mode {
 
 .lien a:hover {
   color: var(--link-hover-color);
-}
-
-/* Positionnement de la barre de liens */
-.lien {
-  font-size: x-large;
-  position: absolute;
-  right: 610px;
-  top: 5px;
-  z-index: 7;
 }
 
 /* Logo */
@@ -154,10 +157,14 @@ header .dark-mode .toggle-dark-mode {
   padding-top: 10%; /* Réduire le remplissage en haut pour abaisser le texte */
   border-right: 2px solid var(--border-color);
   border-bottom: 2px solid var(--border-color);
-  z-index: 1; /* Assurez-vous qu'il soit au-dessus des autres éléments */
+  z-index: 0; /* Assurez-vous qu'il soit au-dessus des autres éléments */
   font-size: 0.9em; /* Réduire la taille de la police */
 }
-
+#toggle-dark-mode {
+  display: block ;
+  position: relative ;
+  z-index: 99;
+}
 /* Styles pour les tablettes */
 @media (min-width: 768px) and (max-width: 1199px) {
 }

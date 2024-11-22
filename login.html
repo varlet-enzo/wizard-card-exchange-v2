@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>création de compte</title>
+    <title>Création de Compte</title>
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
     <style>
@@ -27,42 +27,40 @@
 </head>
 <body>
 
-    <header>
-        <button id="toggle-dark-mode">Activer/Désactiver le mode sombre</button>
-<h1>création de compte</h1>
+<header>
+    <button id="toggle-dark-mode">Activer/Désactiver le mode sombre</button>
+    <h1>Création de Compte</h1>
     <nav class="lien">
         <a href="collection.html">Ma Collection</a>
         <span>|</span>
         <a href="index.html">Accueil</a>
         <span>|</span>
-        <a href="login.html">connexion</a>
+        <a href="login.html">Connexion</a>
     </nav>
 </header>
+
 <form id="registrationForm">
-    <label for="pseudo">identifiant (minimum 6 caractères) :</label>
-    <input type="text" id="pseudo" name="pseudo" minlength="6" required><br><br>
+    <label for="pseudo">Identifiant (minimum 6 caractères) :</label>
+    <input type="text" id="pseudo" name="pseudo" minlength="6" required class="form-input"><br><br>
 
     <label for="email">Email :</label>
-    <input type="email" id="email" name="email" required><br><br>
+    <input type="email" id="email" name="email" required class="form-input"><br><br>
 
-    <label for="mdp">mots de pass (minimum 8 caractères) :</label>
-    <input type="password" id="mdp" name="mdp" minlength="8" required><br><br>
+    <label for="mdp">Mot de passe (minimum 8 caractères) :</label>
+    <input type="password" id="mdp" name="mdp" minlength="8" required class="form-input"><br><br>
 
-    <label for="mdpConfirm">verification du mots de pass :</label>
-    <input type="password" id="mdpConfirm" name="mdpConfirm" required><br><br>
+    <label for="mdpConfirm">Vérification du mot de passe :</label>
+    <input type="password" id="mdpConfirm" name="mdpConfirm" required class="form-input"><br><br>
+
     <div>
-        <input type="password" id="mdp" placeholder="Mot de passe">
-        <button type="button" id="toggleMdp">Afficher</button>
+        <button type="button" id="toggleMdp">Afficher le mot de passe</button>
     </div>
-    <div>
-        <input type="password" id="mdpConfirm" placeholder="Confirmer le mot de passe">
-        <button type="button" id="toggleMdpConfirm">Afficher</button>
-    </div>
+
     <div class="captcha">
-        <label for="captcha-input">entrer le captcha</label>
+        <label for="captcha-input">Entrer le captcha :</label>
         <div class="preview"></div>
         <div class="captcha-form">
-            <input type="text" id="captcha-form" placeholder="enter captcha text">
+            <input type="text" id="captcha-form" placeholder="Entrer le texte du captcha" class="form-input">
             <button class="captcha-refresh">
                 <i class="fa fa-refresh"></i>
             </button>
@@ -70,7 +68,7 @@
     </div>
 
     <fieldset>
-        <legend>choisi ta maison :</legend>
+        <legend>Choisissez votre maison :</legend>
         <input type="radio" id="option1" name="options" value="top" required>
         <label for="option1">Gryffondor</label><br>
         <input type="radio" id="option2" name="options" value="mid">
@@ -88,5 +86,5 @@
 
 <script src="login.js"></script>
 
+
 </body>
-</html>

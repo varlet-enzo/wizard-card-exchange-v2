@@ -131,3 +131,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+const toggleButton = document.getElementById('toggle-dark-mode');
+const body = document.body;
+const formInputs = document.querySelectorAll('.form-input');
+
+toggleButton.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    formInputs.forEach(input => {
+        input.classList.toggle('dark-mode');
+    });
+});
+
+function validateForm() {
+    // Votre logique de validation ici
+    const messageDiv = document.getElementById('message');
+    messageDiv.textContent = "Formulaire soumis !"; // Exemple de message
+}

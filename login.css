@@ -1,3 +1,4 @@
+/* Styles par défaut (mode clair) */
 body {
     font-family: 'Playfair Display', serif; /* A font reminiscent of ancient tomes */
     background-image: url('https://i.imgur.com/Ei4Thaf.jpeg'); /* A Hogwarts-inspired background image */
@@ -35,7 +36,7 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    width: 100%;
+    width: 94%;
     padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #666; /* A dark, muted border color */
@@ -79,4 +80,30 @@ button:hover {
 
 .error {
     color: #FFC080; /* A warm, fiery color reminiscent of the Weasley's wildfire whiskey */
+}
+
+/* Styles pour le mode sombre */
+body.dark-mode {
+    background-image: none; /* Supprimez l'image de fond pour le mode sombre */
+    background-color: #121212; /* Couleur de fond sombre */
+}
+
+form.dark-mode {
+    background-color: #333; /* Couleur sombre pour le formulaire */
+}
+
+label.dark-mode {
+    color: #F5F5F5; /* Couleur claire pour les labels en mode sombre */
+}
+
+input[type="text"].dark-mode,
+input[type="email"].dark-mode,
+input[type="password"].dark-mode {
+    background-color: #444; /* Couleur sombre pour les champs de saisie */
+    color: #F5F5F5; /* Couleur claire pour le texte */
+}
+
+button.dark-mode {
+    background-color: #8B4513; /* Couleur du bouton pour le mode sombre */
+    color: white;
 }
