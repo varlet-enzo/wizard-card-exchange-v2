@@ -108,11 +108,11 @@ header .dark-mode #toggle-dark-mode {
   color: #C9B9A5; /* Une couleur beige clair pour un look vintage */
   background-color: #7F3F3F; /* Un rouge foncé pour rappeler Gryffondor */
   padding: 10px 20px;
-  margin-top: -1%;
+  margin-top: -2%;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 0;
+  z-index: 1;
 }
 
 .lien a {
@@ -180,8 +180,8 @@ header .dark-mode #toggle-dark-mode {
 #toggle-dark-mode {
   display: block;
   position: relative; /* ou relative selon vos besoins */
-  top: 1%; /* Ajustez cette valeur pour la position verticale */
-  left: 15%; /* Ajustez cette valeur pour la position horizontale */
+  top: 0.5%; /* Ajustez cette valeur pour remonter l'icône de soleil */
+  left: 25%; /* Ajustez cette valeur pour la position horizontale */
   z-index: 99;
   width: 40px; /* Ajustez la taille selon vos besoins */
   height: 40px; /* Ajustez la taille selon vos besoins */
@@ -189,21 +189,20 @@ header .dark-mode #toggle-dark-mode {
   border: none; /* Pas de bordure */
   cursor: pointer; /* Curseur en main */
 }
-
 .icon-sun {
-  background-image: url('soleil.png'); /* Assurez-vous que le chemin est correct */
-  width: 40px; /* Ajustez selon vos besoins */
-  height: 40px;
+  background-image: url('soleil.png');
   background-size: contain;
   display: inline-block;
+  width: 40px !important; /* Forcer la taille */
+  height: 40px !important; /* Forcer la taille */
 }
 
 .icon-moon {
-  background-image: url('icone-de-la-lune.png'); /* Assurez-vous que le chemin est correct */
-  width: 40px; /* Ajustez selon vos besoins */
-  height: 40px;
+  background-image: url('icone-de-la-lune.png');
   background-size: contain;
-  display: none; /* Caché par défaut */
+  display: inline-block;
+  width: 40px !important; /* Forcer la taille */
+  height: 40px !important; /* Forcer la taille */
 }
 
 .icon-sun, .icon-moon {
@@ -231,13 +230,25 @@ body.dark-mode .icon-moon {
 
 #darkModeToggle #icon {
   position: absolute; /* Position absolue pour superposer l'icône */
-  top: 0; /* Ajustez selon vos besoins */
+  top: -15px; /* Ajustez cette valeur pour remonter l'icône de lune */
   left: 230px; /* Ajustez selon vos besoins */
   width: 40px; /* Ajustez selon vos besoins */
   height: 40px; /* Ajustez selon vos besoins */
   background-size: contain; /* Assurez-vous que l'image s'ajuste */
 }
 
+h1 {
+  margin-top: -1%;
+  position: absolute; /* Changez à relative */
+  z-index: 2;
+  color: #F9C74F; /* Couleur visible */
+  font-size: 24px; /* Taille de police appropriée */
+  display: block; /* Assurez-vous qu'il est affiché */
+}
+
+nav.lien {
+    margin-top: -2%; /* Ajustez la valeur pour espacer le titre des liens */
+}
 /* Styles pour les tablettes */
 @media (min-width: 768px) and (max-width: 1199px) {
 }

@@ -15,6 +15,7 @@ body {
 }
 
 header {
+    position: relative;
     background-color: #4CAF50; /* Couleur de fond du header */
     color: white;
     padding: 20px;
@@ -101,6 +102,26 @@ button:hover {
     padding: 10px;
 }
 
+#toggle-dark-mode {
+    display: block;
+    position: relative; /* Gardez cette propriété */
+    top: 0.5%; /* Ajustez cette valeur si nécessaire */
+    left: 70%; /* Augmentez cette valeur pour déplacer vers la droite */
+    z-index: 99;
+    width: 40px; /* Ajustez la taille selon vos besoins */
+    height: 40px; /* Ajustez la taille selon vos besoins */
+    background-color: transparent; /* Fond transparent pour le bouton */
+    border: none; /* Pas de bordure */
+    cursor: pointer; /* Curseur en main */
+}
+
+#darkModeToggle {
+    position: absolute; /* Changez à absolute */
+    top: 40px; /* Ajustez la position verticale */
+    right: 20px; /* Ajustez la position horizontale pour déplacer vers la droite */
+    z-index: 99;
+}   
+
 .icon-sun {
     background-image: url('soleil.png'); /* Assurez-vous que le chemin est correct */
     width: 40px; /* Ajustez selon vos besoins */
@@ -117,12 +138,12 @@ button:hover {
     display: none; /* Caché par défaut */
 }
 
-.icon-sun, .icon-moon {
-    background-repeat: no-repeat;
-    width: 40px; /* Ajustez la taille selon vos besoins */
-    height: 40px; /* Ajustez la taille selon vos besoins */
-    background-size: contain; /* Ajuste la taille de l'image */
-    display: inline-block; /* Assurez-vous qu'elles s'affichent en ligne */
+.icon-sun .icon-moon {
+        width: 40px; /* Ajustez la taille selon vos besoins */
+        height: 40px; /* Ajustez la taille selon vos besoins */
+        background-size: contain;
+        display: inline-block; /* Assurez-vous qu'elles s'affichent en ligne */
+    
     z-index: 4;
   }
 
