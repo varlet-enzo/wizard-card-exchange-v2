@@ -1,21 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Garamond&display=swap');
+
 :root {
-  --background-color: rgba(0, 0, 0, 0.8); /* Fond sombre pour le thème */
-  --link-color: #f9c74f; /* Jaune Poudlard */
-  --link-hover-color: #f94144; /* Rouge Gryffondor */
+  --background-color: rgba(0, 0, 0, 0.8);
+  --link-color: #f9c74f;
+  --link-hover-color: #f94144;
   --card-background: rgba(255, 255, 255, 0.9);
-  --sidebar-background: rgba(0, 0, 0, 0.7); /* Fond sombre pour la sidebar */
-  --border-color: #d9d9d9; /* Couleur claire pour les bordures */
+  --sidebar-background: rgba(0, 0, 0, 0.7);
+  --border-color: #d9d9d9;
 }
 
 body {
-  background: url('background-harry-potter.jpg') no-repeat center center fixed; /* Image d'arrière-plan inspirée de Harry Potter */
+  background: url('background-harry-potter.jpg') no-repeat center center fixed;
   background-size: cover;
   overflow-x: hidden;
   display: grid;
-  font-family: 'Garamond', serif; /* Police inspirée du style médiéval */
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  color: #f9f9f9; /* Couleur de texte claire pour le contraste */
+  color: #f9f9
+}
+
+body.dark-mode {
+  background-color: #121212; /* Couleur de fond sombre */
+  color: #ffffff; /* Couleur du texte claire */
+}
+
+body.dark-mode header, 
+body.dark-mode nav, 
+body.dark-mode .sommaire {
+  background-color: #fefefe; /* Couleur de fond des éléments d'en-tête */
+  border-color: #333; /* Couleur des bordures */
+}
+
+body.dark-mode a {
+  color: #bb86fc; /* Couleur des liens */
+}
+
+body.dark-mode .booster {
+  background-color: #1e1e1e; /* Couleur de fond des boosters */
+  border: 1px solid #333; /* Couleur de la bordure des boosters */
+}
+
+header .dark-mode .toggle-dark-mode {
+  z-index: 8;
 }
 
 /* Conteneur de cartes */
@@ -87,7 +114,7 @@ body {
   width: 23%;
   height: 100px;
   margin-left: -20px;
-  z-index: 2;
+  z-index: 3;
 }
 
 /* Styles des images */
@@ -95,7 +122,7 @@ body {
   width: 100%;
   height: auto;
   object-fit: cover;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* Bloc */
@@ -109,6 +136,13 @@ body {
   opacity: 0.9; /* Plus opaque pour un meilleur contraste */
 }
 
+.block-3 {
+  position: absolute; /* ou fixed selon vos besoins */
+  top: 5%; /* Ajustez cette valeur pour la position verticale */
+  right: 0; /* Positionne l'élément à droite */
+  transform: translateY(-50%); /* Centre verticalement par rapport à son propre hauteur */
+}
+
 .sommaire {
   position: fixed; /* Changez la position à fixed */
   top: 0; /* Positionnez-le en haut */
@@ -116,11 +150,12 @@ body {
   width: 200px; /* Largeur du sommaire */
   height: 100vh; /* Hauteur de la fenêtre */
   background-color: var(--sidebar-background);
-  padding: 20px; /* Ajoutez du remplissage */
-  padding-top: 50px; /* Ajoutez du remplissage en haut pour abaisser le texte */
+  padding: 10px; /* Réduire le remplissage */
+  padding-top: 10%; /* Réduire le remplissage en haut pour abaisser le texte */
   border-right: 2px solid var(--border-color);
   border-bottom: 2px solid var(--border-color);
-  z-index: 5; /* Assurez-vous qu'il soit au-dessus des autres éléments */
+  z-index: 1; /* Assurez-vous qu'il soit au-dessus des autres éléments */
+  font-size: 0.9em; /* Réduire la taille de la police */
 }
 
 /* Styles pour les tablettes */

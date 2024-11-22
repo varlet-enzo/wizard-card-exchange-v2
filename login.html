@@ -28,6 +28,7 @@
 <body>
 
     <header>
+        <button id="toggle-dark-mode">Activer/Désactiver le mode sombre</button>
 <h1>création de compte</h1>
     <nav class="lien">
         <a href="collection.html">Ma Collection</a>
@@ -49,6 +50,14 @@
 
     <label for="mdpConfirm">verification du mots de pass :</label>
     <input type="password" id="mdpConfirm" name="mdpConfirm" required><br><br>
+    <div>
+        <input type="password" id="mdp" placeholder="Mot de passe">
+        <button type="button" id="toggleMdp">Afficher</button>
+    </div>
+    <div>
+        <input type="password" id="mdpConfirm" placeholder="Confirmer le mot de passe">
+        <button type="button" id="toggleMdpConfirm">Afficher</button>
+    </div>
     <div class="captcha">
         <label for="captcha-input">entrer le captcha</label>
         <div class="preview"></div>

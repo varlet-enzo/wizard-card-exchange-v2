@@ -6,6 +6,11 @@ function validateForm() {
     const captchaInput = document.getElementById('captcha-form'); // Assurez-vous que l'ID correspond à votre champ CAPTCHA
     const messageDiv = document.getElementById('message');
 
+    let passCheck = new RegExp(
+
+        "^(?=,[a-z])(?=.[A-Z])(?=,\\d) (?=.[-+_!@#$%^&*.,?]).+$" 
+    );
+
     let isValid = true;
     messageDiv.innerHTML = ''; // Réinitialiser le message
 
@@ -30,10 +35,10 @@ function validateForm() {
     }
 
     // Validation du mot de passe
-    if (mdp.value.length < 8) {
+    if (!passCheck.test(mdp.value)) {
         mdp.classList.add('invalid');
         isValid = false;
-        messageDiv.innerHTML += '<p class="error">Le mot de passe doit comporter au moins 8 caractères.</p>';
+        messageDiv.innerHTML += '<p class="error">Le mot de passe doit comporter au moins 8 caractères, dont une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial.</p>';
     } else {
         mdp.classList.remove('invalid');
         mdp.classList.add('valid');
@@ -102,3 +107,27 @@ function initcaptcha() {
 }
 
 initcaptcha();
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('toggleMdp').addEventListener('click', function() {
+        const mdpInput = document.getElementById('mdp');
+        if (mdpInput.type === 'password') {
+            mdpInput.type = 'text';
+            this.textContent = 'Masquer';
+        } else {
+            mdpInput.type = 'password';
+            this.textContent = 'Afficher';
+        }
+    });
+
+    document.getElementById('toggleMdpConfirm').addEventListener('click', function() {
+        const mdpConfirmInput = document.getElementById('mdpConfirm');
+        if (mdpConfirmInput.type === 'password') {
+            mdpConfirmInput.type = 'text';
+            this.textContent = 'Masquer';
+        } else {
+            mdpConfirmInput.type = 'password';
+            this.textContent = 'Afficher';
+        }
+    });
+});

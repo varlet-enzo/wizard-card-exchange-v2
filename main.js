@@ -54,3 +54,22 @@ function populateCharacterSelect() {
         characterSelect.appendChild(option); // Ajouter l'option au menu déroulant
     });
 }
+
+    const toggleButton = document.getElementById('toggle-dark-mode');
+    const body = document.body;
+
+    // Vérifier si le mode sombre est déjà activé
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+    }
+
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+
+        // Enregistrer l'état dans localStorage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('dark-mode', 'enabled');
+        } else {
+            localStorage.setItem('dark-mode', 'disabled');
+        }
+    });
