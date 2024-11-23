@@ -116,14 +116,20 @@ button:hover {
 }
 
 #darkModeToggle {
-    position: absolute; /* Changez à absolute */
-    top: 40px; /* Ajustez la position verticale */
-    right: 20px; /* Ajustez la position horizontale pour déplacer vers la droite */
+    display: block;
+    position: relative; /* ou absolute selon vos besoins */
+    top: 0.5%; /* Ajustez cette valeur si nécessaire */
+    left: 90%; /* Augmentez cette valeur pour déplacer vers la droite */
     z-index: 99;
-}   
+    width: 40px; /* Ajustez la taille selon vos besoins */
+    height: 40px; /* Ajustez la taille selon vos besoins */
+    background-color: transparent; /* Fond transparent pour le bouton */
+    border: none; /* Pas de bordure */
+    cursor: pointer; /* Curseur en main */
+} 
 
 .icon-sun {
-    background-image: url('soleil.png'); /* Assurez-vous que le chemin est correct */
+    background-image: url('gryffondor.png'); /* Assurez-vous que le chemin est correct */
     width: 40px; /* Ajustez selon vos besoins */
     height: 40px;
     background-size: contain;
@@ -131,7 +137,7 @@ button:hover {
 }
 
 .icon-moon {
-    background-image: url('icone-de-la-lune.png'); /* Assurez-vous que le chemin est correct */
+    background-image: url('slytherin_mode.png'); /* Assurez-vous que le chemin est correct */
     width: 40px; /* Ajustez selon vos besoins */
     height: 40px;
     background-size: contain;
@@ -139,13 +145,13 @@ button:hover {
 }
 
 .icon-sun .icon-moon {
-        width: 40px; /* Ajustez la taille selon vos besoins */
-        height: 40px; /* Ajustez la taille selon vos besoins */
-        background-size: contain;
-        display: inline-block; /* Assurez-vous qu'elles s'affichent en ligne */
-    
+    margin-left: 10%;
+    width: 40px; /* Ajustez la taille selon vos besoins */
+    height: 40px; /* Ajustez la taille selon vos besoins */
+    background-size: contain;
+    display: inline-block; /* Assurez-vous qu'elles s'affichent en ligne */
     z-index: 4;
-  }
+}
 
 body.dark-mode .icon-sun {
     display: none; /* Masquer l'icône du soleil en mode sombre */

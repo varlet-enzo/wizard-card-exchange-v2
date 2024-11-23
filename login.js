@@ -8,7 +8,7 @@ function validateForm() {
 
     let passCheck = new RegExp(
 
-        "^(?=,[a-z])(?=.[A-Z])(?=,\\d) (?=.[-+_!@#$%^&*.,?]).+$" 
+        "^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[#$@!]).{8,}$"
     );
 
     let isValid = true;
@@ -122,17 +122,22 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-const toggleButton = document.getElementById('darkModeToggle');
-const icon = document.getElementById('icon');
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('darkModeToggle');
+    const icon = document.getElementById('icon');
+    const form = document.getElementById('registrationForm'); // Assurez-vous que l'ID est correct
 
-toggleButton.addEventListener('click', () => {
-    if (icon.classList.contains('icon-sun')) {
-        icon.classList.remove('icon-sun');
-        icon.classList.add('icon-moon');
-        document.body.classList.add('dark-mode'); // Active le mode sombre
-    } else {
-        icon.classList.remove('icon-moon');
-        icon.classList.add('icon-sun');
-        document.body.classList.remove('dark-mode'); // Désactive le mode sombre
-    }
+    toggleButton.addEventListener('click', () => {
+        if (icon.classList.contains('icon-sun')) {
+            icon.classList.remove('icon-sun');
+            icon.classList.add('icon-moon');
+            document.body.classList.add('slytherin-mode'); // Active le mode Slytherin
+            form.classList.add('slytherin-mode'); // Applique le mode Slytherin au formulaire
+        } else {
+            icon.classList.remove('icon-moon');
+            icon.classList.add('icon-sun');
+            document.body.classList.remove('slytherin-mode'); // Désactive le mode Slytherin
+            form.classList.remove('slytherin-mode'); // Désactive le mode Slytherin pour le formulaire
+        }
+    });
 });

@@ -5,7 +5,8 @@ body {
     background-size: cover;
     background-position: center;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 .email-input {
@@ -17,7 +18,8 @@ body {
     font-size: x-large;
     text-decoration: none;
     color: #C9B9A5; /* Couleur beige clair pour un look vintage */
-    background-color: #423f7f; /* Rouge foncé pour rappeler Gryffondor */
+    background-color: #9B2226; /* Rouge foncé pour rappeler Gryffondor */
+    width: 100%;
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -108,29 +110,77 @@ button:hover {
     color: #FFC080; /* Couleur chaude, rappelant le whiskey des Weasley */
 }
 
-/* Styles pour le mode sombre */
-body.dark-mode {
-    background-image: none; /* Supprime l'image de fond */
-    background-color: #121212; /* Couleur de fond sombre */
+/* Styles pour le mode Slytherin */
+body.slytherin-mode {
+    background-color: #1a1a1a; /* Couleur de fond sombre */
+    color: #A8CBB7; /* Couleur claire pour le texte */
 }
 
-form.dark-mode {
-    background-color: #333; /* Couleur sombre pour le formulaire */
+form.slytherin-mode {
+    background-color: #2b2b2b; /* Couleur sombre pour le formulaire */
 }
 
-label.dark-mode {
-    color: #F5F5F5; /* Couleur claire pour les labels en mode sombre */
+body.slytherin-mode form label {
+    color: #A8CBB7; /* Couleur claire pour les labels en mode sombre */
 }
 
-input[type="text"].dark-mode,
-input[type="email"].dark-mode,
-input[type="password"].dark-mode {
+input[type="text"].slytherin-mode,
+input[type="email"].slytherin-mode,
+input[type="password"].slytherin-mode {
     background-color: #444; /* Couleur sombre pour les champs de saisie */
-    color: #F5F5F5; /* Couleur claire pour*/
+    color: #e0e0e0; /* Couleur claire pour le texte des champs de saisie */
+}
+
+button.slytherin-mode {
+    background-color: #3a3a3a; /* Couleur sombre pour les boutons */
+    color: #ffffff; /* Couleur claire pour le texte des boutons */
+}
+
+/* Ajout de styles pour le texte du captcha en mode Slytherin */
+body.slytherin-mode .captcha label {
+    color: #A8CBB7; /* Couleur claire pour le texte du captcha */
+}
+
+body.slytherin-mode .captcha .preview {
+    color: #ffffff; /* Couleur du texte du captcha */
+    background-color: #333; /* Couleur de fond pour le captcha */
+    border: 1px solid #666; /* Bordure pour le captcha */
+    padding: 5px; /* Espacement interne */
+    border-radius: 4px; /* Coins arrondis */
+}
+
+body.slytherin-mode button {
+    background-color: #3A3D3F; /* Couleur sombre pour les boutons en mode Slytherin */
+    color: #A8CBB7; /* Couleur claire pour le texte des boutons */
+}
+
+body.slytherin-mode button:hover {
+    background-color: #2b2b2b; /* Une version plus sombre pour le survol */
+    transform: translateY(-2px);
+}
+
+body.slytherin-mode {
+    color: #ffffff; /* Couleur de texte par défaut */
+}
+
+body.slytherin-mode h1 {
+    color: #A8CBB7; /* Couleur claire pour le titre */
+}
+
+body.slytherin-mode .lien {
+    background-color: #3A3D3F; /* Couleur de fond pour les liens */
+}
+
+body.slytherin-mode .lien a {
+    color: #A8CBB7; /* Couleur des liens */
+}
+
+body.slytherin-mode .lien a:hover {
+    color: #A3D9A5; /* Couleur des liens au survol */
 }
 
 .icon-sun {
-    background-image: url('soleil.png'); /* Assurez-vous que le chemin est correct */
+    background-image: url('gryffondor.png'); /* Assurez-vous que le chemin est correct */
     width: 40px; /* Ajustez selon vos besoins */
     height: 40px;
     background-size: contain;
@@ -138,7 +188,7 @@ input[type="password"].dark-mode {
 }
 
 .icon-moon {
-    background-image: url('icone-de-la-lune.png'); /* Assurez-vous que le chemin est correct */
+    background-image: url('slytherin_mode.png'); /* Assurez-vous que le chemin est correct */
     width: 40px; /* Ajustez selon vos besoins */
     height: 40px;
     background-size: contain;
@@ -158,4 +208,19 @@ body.dark-mode .icon-sun {
 
 body.dark-mode .icon-moon {
     display: inline-block; /* Afficher l'icône de la lune en mode sombre */
+}
+#darkModeToggle #icon {
+    position: absolute; /* Position absolue pour superposer l'icône */
+    top: -15px; /* Ajustez cette valeur pour remonter l'icône de lune */
+    left: 20px; /* Ajustez selon vos besoins */
+    width: 40px; /* Ajustez selon vos besoins */
+    height: 40px; /* Ajustez selon vos besoins */
+    background-size: contain; /* Assurez-vous que l'image s'ajuste */
+  }
+
+  #darkModeToggle {
+    display: inline-block;
+    position: relative; /* Nécessaire pour utiliser top */
+    top: -8px; /* Ajustez cette valeur selon vos besoins */
+    right: 41%; /* Ajustez selon vos besoins */
 }

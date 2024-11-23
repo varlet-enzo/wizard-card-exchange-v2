@@ -60,7 +60,7 @@ header .dark-mode #toggle-dark-mode {
   display: grid; /* Utiliser le modèle de grille */
   grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
   grid-gap: 20px; /* Espacement entre les cartes */
-  margin: 170px auto; /* Augmenter la marge supérieure pour le déplacer plus bas */
+  margin: 20px auto; /* Augmenter la marge supérieure pour le déplacer plus bas */
   max-width: 1200px; /* Limiter la largeur maximale pour un meilleur centrage */
   justify-items: center; /* Centrer les éléments horizontalement */
   align-items: center; /* Centrer les éléments verticalement */
@@ -161,19 +161,30 @@ header .dark-mode #toggle-dark-mode {
   transform: translateY(-50%); /* Centre verticalement par rapport à son propre hauteur */
 }
 
+/* Styles pour le sommaire */
 .sommaire {
-  position: fixed; /* Changez la position à fixed */
-  top: 0; /* Positionnez-le en haut */
-  left: 0; /* Alignez-le à gauche */
-  width: 200px; /* Largeur du sommaire */
-  height: 100vh; /* Hauteur de la fenêtre */
-  background-color: var(--sidebar-background);
-  padding: 10px; /* Réduire le remplissage */
-  padding-top: 13%; /* Réduire le remplissage en haut pour abaisser le texte */
-  border-right: 2px solid var(--border-color);
-  border-bottom: 2px solid var(--border-color);
-  z-index: 0; /* Assurez-vous qu'il soit au-dessus des autres éléments */
-  font-size: 0.9em; /* Réduire la taille de la police */
+    position: fixed; /* Changez la position à fixed */
+    top: 0; /* Positionnez-le en haut */
+    left: 0; /* Alignez-le à gauche */
+    width: 200px; /* Largeur du sommaire */
+    height: 100vh; /* Hauteur de la fenêtre */
+    background-color: #9B2226; /* Rouge foncé de Gryffondor */
+    padding: 10px; /* Réduire le remplissage */
+    padding-top: 13%; /* Réduire le remplissage en haut pour abaisser le texte */
+    border-right: 2px solid #d9d9d9; /* Bordure pour le sommaire */
+    border-bottom: 2px solid #d9d9d9; /* Bordure pour le sommaire */
+    z-index: 0; /* Assurez-vous qu'il soit au-dessus des autres éléments */
+    font-size: 0.9em; /* Réduire la taille de la police */
+    color: #F9C74F; /* Couleur dorée pour le texte */
+}
+
+.sommaire a {
+    color: #F9C74F; /* Jaune doré pour le texte des liens */
+    text-decoration: none; /* Pas de soulignement */
+}
+
+.sommaire a:hover {
+    color: #FFC107; /* Couleur dorée plus claire au survol */
 }
 
 /* Styles pour le bouton de changement de mode sombre */
@@ -190,7 +201,7 @@ header .dark-mode #toggle-dark-mode {
   cursor: pointer; /* Curseur en main */
 }
 .icon-sun {
-  background-image: url('soleil.png');
+  background-image: url('gryffondor.png');
   background-size: contain;
   display: inline-block;
   width: 40px !important; /* Forcer la taille */
@@ -198,7 +209,7 @@ header .dark-mode #toggle-dark-mode {
 }
 
 .icon-moon {
-  background-image: url('icone-de-la-lune.png');
+  background-image: url('slytherin_mode.png');
   background-size: contain;
   display: inline-block;
   width: 40px !important; /* Forcer la taille */
