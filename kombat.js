@@ -18,8 +18,8 @@ class Personnage {
 }
 
 
-const combattant1 = new Personnage("Guerrier", 100, 20, 0.8);
-const combattant2 = new Personnage("Mage", 80, 25, 0.7);
+const combattant1 = new Personnage("Mangemorts", 100, 20, 0.8);
+const combattant2 = new Personnage("Dumbledore", 80, 25, 0.7);
 
 
 const pv1Element = document.getElementById('pv1');
