@@ -1,27 +1,26 @@
-let characters = []; 
-let currentIndex = 0; 
+let currentIndex = 0; // Index du personnage actuellement affiché
+let characters = []; // Tableau pour stocker les personnages
 
-function createCharacterCard(character) {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = `
-        <h3>${character.name}</h3>
-        <p>Maison: ${character.house || 'Inconnue'}</p>
-        <p>Âge: ${character.age || 'Inconnu'}</p>
-        <img src="${character.image || 'url_de_l_image_par_defaut.jpg'}" alt="${character.name}" width="100">
-    `;
-    return card;
+// Fonction pour ajouter un personnage
+function addCharacter(name, house, age, image) {
+    characters.push({ name, house, age, image });
 }
 
+// Exemple d'ajout de personnages (décommenter si nécessaire)
+addCharacter("Harry Potter", "Gryffondor", 17, "url_image_harry");
+addCharacter("Hermione Granger", "Gryffondor", 17, "url_image_hermione");
+addCharacter("Draco Malfoy", "Slytherin", 17, "url_image_draco");
+
+// Fonction pour afficher le personnage actuel
 function showCurrentCharacter() {
     const characterCard = document.getElementById('characterCard');
     if (characters.length > 0) {
         const character = characters[currentIndex];
         characterCard.innerHTML = `
-            <h3>${character.name}</h3>
+            <h3>${character.name || 'Nom inconnu'}</h3>
             <p>Maison: ${character.house || 'Inconnue'}</p>
             <p>Âge: ${character.age || 'Inconnu'}</p>
-            <img src="${character.image || 'url_de_l_image_par_defaut.jpg'}" alt="${character.name}" width="100">
+            <img src="${character.image || 'url_de_l_image_par_defaut.jpg'}" alt="${character.name || 'Personnage'}" width="100">
         `;
         characterCard.style.display = 'block';
     } else {
@@ -29,15 +28,7 @@ function showCurrentCharacter() {
     }
 }
 
-function showCharacters() {
-    const characterGrid = document.getElementById('characterGrid');
-    characterGrid.innerHTML = '';
-    characters.forEach(character => {
-        const card = createCharacterCard(character);
-        characterGrid.appendChild(card);
-    });
-}
-
+// Fonction pour remplir le sélecteur de personnages
 function populateCharacterSelect() {
     const characterSelect = document.getElementById('characterSelect');
     characterSelect.innerHTML = '';
@@ -49,18 +40,20 @@ function populateCharacterSelect() {
     });
 }
 
+// Appeler la fonction pour récupérer les personnages lors du chargement de la page
 document.addEventListener('DOMContentLoaded', function() {
     const toggleButton = document.getElementById('darkModeToggle');
     const icon = document.getElementById('icon');
+
     toggleButton.addEventListener('click', () => {
         if (icon.classList.contains('icon-sun')) {
             icon.classList.remove('icon-sun');
             icon.classList.add('icon-moon');
-            document.body.classList.add('dark-mode');
+            document.body.classList.add('slytherin-mode'); // Active le mode Slytherin
         } else {
             icon.classList.remove('icon-moon');
             icon.classList.add('icon-sun');
-            document.body.classList.remove('dark-mode');
+            document.body.classList.remove('slytherin-mode'); // Désactive le mode Slytherin
         }
     });
 });
