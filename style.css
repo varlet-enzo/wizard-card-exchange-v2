@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Garamond&display=swap');
-
 :root {
   --background-color: rgba(0, 0, 0, 0.8);
   --link-color: #f9c74f;
@@ -18,70 +16,67 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  color: #D1A24A; /* Une couleur dorée pour rappeler les couleurs des maisons */
+  color: #D1A24A;
 }
 
 body.dark-mode {
-  background-color: #121212; /* Couleur de fond sombre */
-  color: #ffffff; /* Couleur du texte claire */
+  background-color: #121212;
+  color: #ffffff;
 }
 
 body.dark-mode header, 
 body.dark-mode nav, 
 body.dark-mode .sommaire {
-  background-color: #fefefe; /* Couleur de fond des éléments d'en-tête */
-  border-color: #333; /* Couleur des bordures */
+  background-color: #fefefe;
+  border-color: #333;
 }
 
 body.dark-mode a {
-  color: #bb86fc; /* Couleur des liens */
+  color: #bb86fc;
 }
 
 body.dark-mode .booster {
-  background-color: #1e1e1e; /* Couleur de fond des boosters */
-  border: 1px solid #333; /* Couleur de la bordure des boosters */
+  background-color: #1e1e1e;
+  border: 1px solid #333;
 }
 
 header .dark-mode #toggle-dark-mode {
   z-index: 8;
 }
 
-/* Conteneur de cartes */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
-  grid-template-rows: repeat(3, 1fr); /* 3 lignes */
-  grid-gap: 20px; /* Espacement entre les cartes */
-  margin: 100px auto; /* Centrer le conteneur avec une marge automatique */
-  max-width: 1200px; /* Limiter la largeur maximale pour un meilleur centrage */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin: 100px auto;
+  max-width: 1200px;
 }
 
 .card-booster {
-  display: grid; /* Utiliser le modèle de grille */
-  grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
-  grid-gap: 20px; /* Espacement entre les cartes */
-  margin: 20px auto; /* Augmenter la marge supérieure pour le déplacer plus bas */
-  max-width: 1200px; /* Limiter la largeur maximale pour un meilleur centrage */
-  justify-items: center; /* Centrer les éléments horizontalement */
-  align-items: center; /* Centrer les éléments verticalement */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  justify-items: center;
+  align-items: center;
 }
 
-/* Styles des cartes */
 .card {
   background-color: var(--card-background);
-  border-radius: 12px; /* Coins plus arrondis */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Ombre plus marquée */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7); /* Ombre plus marquée au survol */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
 }
 
-/* Conteneur d'en-tête */
 .tete {
-  position: relative; /* Pour que les éléments enfants soient positionnés par rapport à ce conteneur */
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -89,24 +84,24 @@ header .dark-mode #toggle-dark-mode {
 }
 
 .search-form {
-  position: relative; /* Permet de positionner le formulaire de recherche */
-  top: 10px; /* Ajustez cette valeur pour la position verticale */
-  left: 10px; /* Ajustez cette valeur pour la position horizontale */
-  z-index: 100; /* Assurez-vous qu'il soit au-dessus des autres éléments */
+  position: relative;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
 }
 
 .search-form input {
-  padding: 5px; /* Ajoutez un peu d'espacement interne */
-  border: 1px solid #ccc; /* Bordure légère */
-  border-radius: 5px; /* Coins arrondis */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .lien {
   position: relative;
   font-size: x-large;
   text-decoration: none;
-  color: #C9B9A5; /* Une couleur beige clair pour un look vintage */
-  background-color: #7F3F3F; /* Un rouge foncé pour rappeler Gryffondor */
+  color: #C9B9A5;
+  background-color: #7F3F3F;
   padding: 10px 20px;
   margin-top: -2%;
   display: flex;
@@ -116,13 +111,13 @@ header .dark-mode #toggle-dark-mode {
 }
 
 .lien a {
-  color: #F9C74F; /* Jaune doré pour un contraste avec le fond */
+  color: #F9C74F;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .lien a:hover {
-  color: #F94144; /* Rouge vif au survol pour attirer l'attention */
+  color: #F94144;
 }
 
 .logo {
@@ -135,7 +130,6 @@ header .dark-mode #toggle-dark-mode {
   z-index: 7;
 }
 
-/* Styles des images */
 .block img {
   width: 100%;
   height: auto;
@@ -143,7 +137,6 @@ header .dark-mode #toggle-dark-mode {
   z-index: 2;
 }
 
-/* Bloc */
 .block {
   position: absolute;
   top: 0;
@@ -151,115 +144,114 @@ header .dark-mode #toggle-dark-mode {
   transform: translateX(-50%);
   max-width: 100%;
   height: 300px !important;
-  opacity: 0.9; /* Plus opaque pour un meilleur contraste */
+  opacity: 0.9;
 }
 
 .block-3 {
-  position: absolute; /* ou fixed selon vos besoins */
-  top: 5%; /* Ajustez cette valeur pour la position verticale */
-  right: 0; /* Positionne l'élément à droite */
-  transform: translateY(-50%); /* Centre verticalement par rapport à son propre hauteur */
+  position: absolute;
+  top: 5%;
+  right: 0;
+  transform: translateY(-50%);
 }
 
-/* Styles pour le sommaire */
 .sommaire {
-    position: fixed; /* Changez la position à fixed */
-    top: 0; /* Positionnez-le en haut */
-    left: 0; /* Alignez-le à gauche */
-    width: 200px; /* Largeur du sommaire */
-    height: 100vh; /* Hauteur de la fenêtre */
-    background-color: #9B2226; /* Rouge foncé de Gryffondor */
-    padding: 10px; /* Réduire le remplissage */
-    padding-top: 13%; /* Réduire le remplissage en haut pour abaisser le texte */
-    border-right: 2px solid #d9d9d9; /* Bordure pour le sommaire */
-    border-bottom: 2px solid #d9d9d9; /* Bordure pour le sommaire */
-    z-index: 0; /* Assurez-vous qu'il soit au-dessus des autres éléments */
-    font-size: 0.9em; /* Réduire la taille de la police */
-    color: #F9C74F; /* Couleur dorée pour le texte */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #9B2226;
+  padding: 10px;
+  padding-top: 13%;
+  border-right: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
+  z-index: 0;
+  font-size: 0.9em;
+  color: #F9C74F;
 }
 
 .sommaire a {
-    color: #F9C74F; /* Jaune doré pour le texte des liens */
-    text-decoration: none; /* Pas de soulignement */
+  color: #F9C74F;
+  text-decoration: none;
 }
 
 .sommaire a:hover {
-    color: #FFC107; /* Couleur dorée plus claire au survol */
+  color: #FFC107;
 }
 
-/* Styles pour le bouton de changement de mode sombre */
 #toggle-dark-mode {
   display: block;
-  position: relative; /* ou relative selon vos besoins */
-  top: 0.5%; /* Ajustez cette valeur pour remonter l'icône de soleil */
-  left: 25%; /* Ajustez cette valeur pour la position horizontale */
+  position: relative;
+  top: 0.5%;
+  left: 25%;
   z-index: 99;
-  width: 40px; /* Ajustez la taille selon vos besoins */
-  height: 40px; /* Ajustez la taille selon vos besoins */
-  background-color: transparent; /* Fond transparent pour le bouton */
-  border: none; /* Pas de bordure */
-  cursor: pointer; /* Curseur en main */
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
+
 .icon-sun {
   background-image: url('gryffondor.png');
   background-size: contain;
   display: inline-block;
-  width: 40px !important; /* Forcer la taille */
-  height: 40px !important; /* Forcer la taille */
+  width: 40px !important;
+  height: 40px !important;
 }
 
 .icon-moon {
   background-image: url('slytherin_mode.png');
   background-size: contain;
   display: inline-block;
-  width: 40px !important; /* Forcer la taille */
-  height: 40px !important; /* Forcer la taille */
+  width: 40px !important;
+  height: 40px !important;
 }
 
 .icon-sun, .icon-moon {
   background-repeat: no-repeat;
-  width: 40px; /* Ajustez la taille selon vos besoins */
-  height: 40px; /* Ajustez la taille selon vos besoins */
-  background-size: contain; /* Ajuste la taille de l'image */
-  display: inline-block; /* Assurez-vous qu'elles s'affichent en ligne */
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  display: inline-block;
   z-index: 4;
 }
 
 body.dark-mode .icon-sun {
-  display: none; /* Masquer l'icône du soleil en mode sombre */
+  display: none;
 }
 
 body.dark-mode .icon-moon {
-  display: inline-block; /* Afficher l'icône de la lune en mode sombre */
+  display: inline-block;
 }
 
 #darkModeToggle {
   cursor: pointer;
-  position: relative; /* Position relative pour le conteneur */
-  display: inline-block; /* Permet aux éléments de s'afficher en ligne */
+  position: relative;
+  display: inline-block;
 }
 
 #darkModeToggle #icon {
-  position: absolute; /* Position absolue pour superposer l'icône */
-  top: -15px; /* Ajustez cette valeur pour remonter l'icône de lune */
-  left: 230px; /* Ajustez selon vos besoins */
-  width: 40px; /* Ajustez selon vos besoins */
-  height: 40px; /* Ajustez selon vos besoins */
-  background-size: contain; /* Assurez-vous que l'image s'ajuste */
+  position: absolute;
+  top: -15px;
+  left: 230px;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
 }
 
 h1 {
   margin-top: -1%;
-  position: absolute; /* Changez à relative */
+  position: absolute;
   z-index: 2;
-  color: #F9C74F; /* Couleur visible */
-  font-size: 24px; /* Taille de police appropriée */
-  display: block; /* Assurez-vous qu'il est affiché */
+  color: #F9C74F;
+  font-size: 24px;
+  display: block;
 }
 
 nav.lien {
-    margin-top: -2%; /* Ajustez la valeur pour espacer le titre des liens */
+  margin-top: -2%;
 }
-/* Styles pour les tablettes */
+
 @media (min-width: 768px) and (max-width: 1199px) {
 }

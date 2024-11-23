@@ -3,20 +3,20 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    display: flex; /* Utilisez flexbox pour le corps */
-    flex-direction: column; /* Aligne les enfants en colonne */
-    min-height: 100vh; /* Prend au moins toute la hauteur de la fenêtre */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    flex: 1; /* Permet à cette section de prendre l'espace restant */
+    flex: 1;
 }
 
 header {
     position: relative;
-    background-color: #4CAF50; /* Couleur de fond du header */
+    background-color: #4CAF50;
     color: white;
     padding: 20px;
     text-align: center;
@@ -29,7 +29,7 @@ header {
 }
 
 .exchange-section {
-    flex: 1; /* Permet à cette section de prendre l'espace restant */
+    flex: 1;
     padding: 20px;
 }
 
@@ -78,8 +78,8 @@ button:hover {
 
 .character-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
-    gap: 20px; /* Espace entre les cartes */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     margin-top: 20px;
 }
 
@@ -104,59 +104,59 @@ button:hover {
 
 #toggle-dark-mode {
     display: block;
-    position: relative; /* Gardez cette propriété */
-    top: 0.5%; /* Ajustez cette valeur si nécessaire */
-    left: 70%; /* Augmentez cette valeur pour déplacer vers la droite */
+    position: relative;
+    top: 0.5%;
+    left: 70%;
     z-index: 99;
-    width: 40px; /* Ajustez la taille selon vos besoins */
-    height: 40px; /* Ajustez la taille selon vos besoins */
-    background-color: transparent; /* Fond transparent pour le bouton */
-    border: none; /* Pas de bordure */
-    cursor: pointer; /* Curseur en main */
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 #darkModeToggle {
     display: block;
-    position: relative; /* ou absolute selon vos besoins */
-    top: 0.5%; /* Ajustez cette valeur si nécessaire */
-    left: 90%; /* Augmentez cette valeur pour déplacer vers la droite */
+    position: relative;
+    top: 0.5%;
+    left: 90%;
     z-index: 99;
-    width: 40px; /* Ajustez la taille selon vos besoins */
-    height: 40px; /* Ajustez la taille selon vos besoins */
-    background-color: transparent; /* Fond transparent pour le bouton */
-    border: none; /* Pas de bordure */
-    cursor: pointer; /* Curseur en main */
-} 
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
 
 .icon-sun {
-    background-image: url('gryffondor.png'); /* Assurez-vous que le chemin est correct */
-    width: 40px; /* Ajustez selon vos besoins */
+    background-image: url('gryffondor.png');
+    width: 40px;
     height: 40px;
     background-size: contain;
     display: inline-block;
 }
 
 .icon-moon {
-    background-image: url('slytherin_mode.png'); /* Assurez-vous que le chemin est correct */
-    width: 40px; /* Ajustez selon vos besoins */
+    background-image: url('slytherin_mode.png');
+    width: 40px;
     height: 40px;
     background-size: contain;
-    display: none; /* Caché par défaut */
+    display: none;
 }
 
 .icon-sun .icon-moon {
     margin-left: 10%;
-    width: 40px; /* Ajustez la taille selon vos besoins */
-    height: 40px; /* Ajustez la taille selon vos besoins */
+    width: 40px;
+    height: 40px;
     background-size: contain;
-    display: inline-block; /* Assurez-vous qu'elles s'affichent en ligne */
+    display: inline-block;
     z-index: 4;
 }
 
 body.dark-mode .icon-sun {
-    display: none; /* Masquer l'icône du soleil en mode sombre */
+    display: none;
 }
 
 body.dark-mode .icon-moon {
-    display: inline-block; /* Afficher l'icône de la lune en mode sombre */
+    display: inline-block;
 }

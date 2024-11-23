@@ -7,9 +7,8 @@ function validateForm() {
     const messageDiv = document.getElementById('message');
 
     let passCheck = new RegExp(
-
-        "^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[#$@!]).{8,}$"
-    );
+    "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[#$@!&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?]).{8,}$"
+);
 
     let isValid = true;
     messageDiv.innerHTML = ''; // Réinitialiser le message
@@ -35,7 +34,7 @@ function validateForm() {
     }
 
     // Validation du mot de passe
-    if (!passCheck.test(mdp.value)) {
+    if (!passCheck.test(mdp.value.trim())) {
         mdp.classList.add('invalid');
         isValid = false;
         messageDiv.innerHTML += '<p class="error">Le mot de passe doit comporter au moins 8 caractères, dont une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial.</p>';
@@ -45,14 +44,18 @@ function validateForm() {
     }
 
     // Validation de la vérification du mot de passe
-    if (mdp.value !== mdpConfirm.value) {
-        mdpConfirm.classList.add('invalid');
-        isValid = false;
-        messageDiv.innerHTML += '<p class="error">La vérification du mot de passe ne correspond pas.</p>';
-    } else {
-        mdpConfirm.classList.remove('invalid');
-        mdpConfirm.classList.add('valid');
-    }
+console.log("Mot de passe : ", mdp.value);
+console.log("Confirmation du mot de passe : ", mdpConfirm.value);
+if (mdp.value !== mdpConfirm.value) {
+    console.log("Validation de la confirmation échouée"); // Ligne de débogage
+    mdpConfirm.classList.add('invalid');
+    isValid = false;
+    messageDiv.innerHTML += '<p class="error">La vérification du mot de passe ne correspond pas.</p>';
+} else {
+    console.log("Validation de la confirmation réussie"); // Ligne de débogage
+    mdpConfirm.classList.remove('invalid');
+    mdpConfirm.classList.add('valid');
+}
     
     // Validation du captcha
     if (captchaInput.value.trim() === '') {

@@ -42,7 +42,7 @@
     <h1>Création de Compte</h1>
 </header>
 
-<form id="registrationForm">
+<form id="registrationForm" onsubmit="return validateForm();">
     <label for="pseudo">Identifiant (minimum 6 caractères) :</label>
     <input type="text" id="pseudo" name="pseudo" minlength="6" required class="form-input"><br><br>
 

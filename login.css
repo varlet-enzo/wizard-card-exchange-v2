@@ -1,24 +1,26 @@
-/* Styles par défaut (mode clair) */
 body {
-    font-family: 'Playfair Display', serif; /* Police inspirée des anciens tomes */
-    background-image: url('https://i.imgur.com/Ei4Thaf.jpeg'); /* Image de fond inspirée de Poudlard */
+    font-family: 'Playfair Display', serif;
+    background-image: url('https://i.imgur.com/Ei4Thaf.jpeg');
     background-size: cover;
     background-position: center;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
+input#identifiant {
+    width: 100%;
+}
 
 .email-input {
-    margin-bottom: 20px; /* Ajustez la valeur selon vos besoins */
+    margin-bottom: 20px;
 }
 
 .lien {
     position: relative;
     font-size: x-large;
     text-decoration: none;
-    color: #C9B9A5; /* Couleur beige clair pour un look vintage */
-    background-color: #9B2226; /* Rouge foncé pour rappeler Gryffondor */
+    color: #C9B9A5;
+    background-color: #9B2226;
     width: 100%;
     padding: 10px 20px;
     display: flex;
@@ -27,18 +29,18 @@ body {
 }
 
 .lien a {
-    color: #F9C74F; /* Jaune doré pour un contraste avec le fond */
+    color: #F9C74F;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .lien a:hover {
-    color: #F94144; /* Rouge vif au survol */
+    color: #F94144;
 }
 
 h1 {
     text-align: center;
-    color: #8B4513; /* Couleur chaude, dorée */
+    color: #8B4513;
     margin-bottom: 20px;
     font-size: 36px;
     font-weight: bold;
@@ -46,7 +48,7 @@ h1 {
 }
 
 form {
-    background-color: #F5F5F5; /* Couleur claire, semblable au parchemin */
+    background-color: #F5F5F5;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     padding: 30px;
@@ -58,16 +60,16 @@ label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #8B4513; /* Couleur chaude, dorée */
+    color: #8B4513;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    width: 94%;
+    width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #666;
+    border: 1px solid #8B4513;
     border-radius: 4px;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
@@ -75,13 +77,22 @@ input[type="password"] {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
-    border-color: #8B4513;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
     outline: none;
 }
 
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    border: 1px solid #8B4513;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 button {
-    background-color: #8B4513; /* Couleur chaude, dorée */
+    background-color: #8B4513;
     color: white;
     padding: 12px;
     border: none;
@@ -93,134 +104,143 @@ button {
 }
 
 button:hover {
-    background-color: #663300; /* Une version plus sombre de la couleur */
+    background-color: #663300;
     transform: translateY(-2px);
 }
 
 .message {
-    text-align: center; 
+    text-align: center;
     margin-top: 20px;
 }
 
 .success {
-    color: #2E865F; /* Vert terreux */
+    color: #2E865F;
 }
 
 .error {
-    color: #FFC080; /* Couleur chaude, rappelant le whiskey des Weasley */
+    color: #FFC080;
 }
 
-/* Styles pour le mode Slytherin */
 body.slytherin-mode {
-    background-color: #1a1a1a; /* Couleur de fond sombre */
-    color: #A8CBB7; /* Couleur claire pour le texte */
+    background-color: #1a1a1a;
+    color: #A8CBB7;
+}
+
+body.slytherin-mode input[type="text"]:focus,
+body.slytherin-mode input[type="email"]:focus,
+body.slytherin-mode input[type="password"]:focus,
+body.slytherin-mode select:focus,
+body.slytherin-mode textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
 }
 
 form.slytherin-mode {
-    background-color: #2b2b2b; /* Couleur sombre pour le formulaire */
+    background-color: #2b2b2b;
 }
 
 body.slytherin-mode form label {
-    color: #A8CBB7; /* Couleur claire pour les labels en mode sombre */
+    color: #A8CBB7;
 }
 
 input[type="text"].slytherin-mode,
 input[type="email"].slytherin-mode,
 input[type="password"].slytherin-mode {
-    background-color: #444; /* Couleur sombre pour les champs de saisie */
-    color: #e0e0e0; /* Couleur claire pour le texte des champs de saisie */
+    background-color: #444;
+    color: #e0e0e0;
 }
 
 button.slytherin-mode {
-    background-color: #3a3a3a; /* Couleur sombre pour les boutons */
-    color: #ffffff; /* Couleur claire pour le texte des boutons */
+    background-color: #3a3a3a;
+    color: #ffffff;
 }
 
-/* Ajout de styles pour le texte du captcha en mode Slytherin */
 body.slytherin-mode .captcha label {
-    color: #A8CBB7; /* Couleur claire pour le texte du captcha */
+    color: #A8CBB7;
 }
 
 body.slytherin-mode .captcha .preview {
-    color: #ffffff; /* Couleur du texte du captcha */
-    background-color: #333; /* Couleur de fond pour le captcha */
-    border: 1px solid #666; /* Bordure pour le captcha */
-    padding: 5px; /* Espacement interne */
-    border-radius: 4px; /* Coins arrondis */
+    color: #ffffff;
+    background-color: #333;
+    border: 1px solid #666;
+    padding: 5px;
+    border-radius: 4px;
 }
 
 body.slytherin-mode button {
-    background-color: #3A3D3F; /* Couleur sombre pour les boutons en mode Slytherin */
-    color: #A8CBB7; /* Couleur claire pour le texte des boutons */
+    background-color: #3A3D3F;
+    color: #A8CBB7;
 }
 
 body.slytherin-mode button:hover {
-    background-color: #2b2b2b; /* Une version plus sombre pour le survol */
+    background-color: #2b2b2b;
     transform: translateY(-2px);
 }
 
 body.slytherin-mode {
-    color: #ffffff; /* Couleur de texte par défaut */
+    color: #ffffff;
 }
 
 body.slytherin-mode h1 {
-    color: #A8CBB7; /* Couleur claire pour le titre */
+    color: #A8CBB7;
 }
 
 body.slytherin-mode .lien {
-    background-color: #3A3D3F; /* Couleur de fond pour les liens */
+    background-color: #3A3D3F;
 }
 
 body.slytherin-mode .lien a {
-    color: #A8CBB7; /* Couleur des liens */
+    color: #A8CBB7;
 }
 
 body.slytherin-mode .lien a:hover {
-    color: #A3D9A5; /* Couleur des liens au survol */
+    color: #A3D9A5;
 }
 
 .icon-sun {
-    background-image: url('gryffondor.png'); /* Assurez-vous que le chemin est correct */
-    width: 40px; /* Ajustez selon vos besoins */
+    background-image: url('gryffondor.png');
+    width: 40px;
     height: 40px;
     background-size: contain;
     display: inline-block;
 }
 
 .icon-moon {
-    background-image: url('slytherin_mode.png'); /* Assurez-vous que le chemin est correct */
-    width: 40px; /* Ajustez selon vos besoins */
+    background-image: url('slytherin_mode.png');
+    width: 40px;
     height: 40px;
     background-size: contain;
-    display: none; /* Caché par défaut */
+    display: none;
 }
 
 .icon-sun, .icon-moon {
-    width: 40px; /* Ajustez la taille selon vos besoins */
-    height: 40px; /* Ajustez la taille selon vos besoins */
-    background-size: contain; /* Ajuste la taille de l'image */
-    display: inline-block; /* Assurez-vous qu'elles s'affichent en ligne */
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    display: inline-block;
 }
 
 body.dark-mode .icon-sun {
-    display: none; /* Masquer l'icône du soleil en mode sombre */
+    display: none;
 }
 
 body.dark-mode .icon-moon {
-    display: inline-block; /* Afficher l'icône de la lune en mode sombre */
-}
-#darkModeToggle #icon {
-    position: absolute; /* Position absolue pour superposer l'icône */
-    top: -15px; /* Ajustez cette valeur pour remonter l'icône de lune */
-    left: 20px; /* Ajustez selon vos besoins */
-    width: 40px; /* Ajustez selon vos besoins */
-    height: 40px; /* Ajustez selon vos besoins */
-    background-size: contain; /* Assurez-vous que l'image s'ajuste */
-  }
-
-  #darkModeToggle {
     display: inline-block;
-    position: relative; /* Nécessaire pour utiliser top */
-    top: -8px; /* Ajustez cette valeur selon vos besoins */
-    right: 41%; /* Ajustez selon vos besoins */
 }
+
+#darkModeToggle #icon {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+}
+
+#darkModeToggle {
+    display: inline-block;
+    position: relative;
+    top: -8px;
+    right: 41%;
+} 
