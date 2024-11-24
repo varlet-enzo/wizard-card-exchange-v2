@@ -40,8 +40,6 @@ function validateForm() {
         mdp.classList.add('valid');
     }
 
-console.log("Mot de passe : ", mdp.value);
-console.log("Confirmation du mot de passe : ", mdpConfirm.value);
 if (mdp.value !== mdpConfirm.value) {
     console.log("Validation de la confirmation échouée"); 
     mdpConfirm.classList.add('invalid');
