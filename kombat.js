@@ -48,3 +48,20 @@ function combat() {
             result
         }
     }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('darkModeToggle');
+    const icon = document.getElementById('icon');
+
+    toggleButton.addEventListener('click', () => {
+        if (icon.classList.contains('icon-sun')) {
+            icon.classList.remove('icon-sun');
+            icon.classList.add('icon-moon');
+            document.body.classList.add('slytherin-mode'); 
+        } else {
+            icon.classList.remove('icon-moon');
+            icon.classList.add('icon-sun');
+            document.body.classList.remove('slytherin-mode'); 
+        }
+    });
+});

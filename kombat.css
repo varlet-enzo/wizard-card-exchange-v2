@@ -16,7 +16,7 @@ body {
     margin: 0;
     padding: 0;
     color: #D1A24A;
-    text-align: center; /* Centre tout le texte dans le corps */
+    text-align: center; 
 }
 
 body.dark-mode {
@@ -66,14 +66,14 @@ body.dark-mode .booster {
 
 .tete {
     display: flex;
-    flex-direction: column; /* Changez la direction pour empiler les éléments */
-    align-items: center; /* Centre les éléments horizontalement */
-    margin-bottom: 20px; /* Ajoute un espace entre la tête et les liens */
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 20px; 
 }
 
 .search-form {
     position: relative;
-    top: -30px; /* Adjust this value to lower the search bar */
+    top: -30px; 
     left: 43%;
     z-index: 5;
 }
@@ -82,7 +82,7 @@ body.dark-mode .booster {
     color: #000;
     background-color: #fff;
     height: 30%;
-    padding: 3px; /* Reduce padding for a shorter input height */
+    padding: 3px; 
     border: 1px solid #ccc;
     border-radius: 5px;
     border-color: #00BFBF;
@@ -92,7 +92,7 @@ body.dark-mode .booster {
 
 
 .lien {
-    margin-top: -5%;
+    margin-top: -4%;
     font-size: x-large;
     text-decoration: none;
     color: #C9B9A5;
@@ -185,9 +185,9 @@ body.dark-mode .booster {
   
   #darkModeToggle {
     display: block;
-    position: relative; /* ou absolute si nécessaire */
-    top: 28px; /* Ajustez cette valeur pour descendre l'icône */
-    left: 14%; /* Position horizontale */
+    position: relative; 
+    top: 28px;
+    left: 14%;
     z-index: 99;
     width: 40px;
     height: 40px;
@@ -197,9 +197,57 @@ body.dark-mode .booster {
 }
 
 .icon-sun, .icon-moon {
-    width: 40px; /* Largeur de l'icône */
-    height: 40px; /* Hauteur de l'icône */
-    background-size: contain; /* Assurez-vous que l'image est contenue */
-    display: inline-block; /* S'assurer qu'il est affiché */
-    margin-top: -60%; /* Ajustez cette valeur pour descendre l'icône */
+    width: 40px; 
+    height: 40px; 
+    background-size: contain; 
+    display: inline-block; 
+    margin-top: -60%; 
 }
+
+
+body.slytherin-mode {
+    background-color: #1a1a1a; 
+    color: #A8CBB7; 
+}
+
+body.slytherin-mode header,
+body.slytherin-mode nav,
+body.slytherin-mode .sommaire {
+    background-color: #3A3D3F; 
+    border-color: #666; 
+}
+
+body.slytherin-mode .lien {
+    background-color: #3A3D3F;
+}
+
+body.slytherin-mode .lien a {
+    color: #A8CBB7; 
+}
+
+body.slytherin-mode .lien a:hover {
+    color: #A3D9A5;
+}
+
+body.slytherin-mode .card {
+    background-color: #2b2b2b; 
+    border: 1px solid #666; 
+}
+
+body.slytherin-mode .card h3 {
+    color: #A8CBB7; 
+}
+
+body.slytherin-mode .card p {
+    color: #D1D1D1; 
+}
+
+body.slytherin-mode button {
+    background-color: #3A3D3F; 
+    color: #A8CBB7; /
+}
+
+body.slytherin-mode button:hover {
+    background-color: #2b2b2b; 
+}
+

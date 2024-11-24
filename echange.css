@@ -1,19 +1,20 @@
 :root {
-    --background-color: #121212; /* Fond sombre pour un effet magique */
-    --link-color: #F9C74F; /* Or pour les liens */
-    --link-hover-color: #9B2226; /* Rouge pour le survol des liens */
-    --card-background: rgba(255, 255, 255, 0.9); /* Fond des cartes */
+    --background-color: #121212;
+    --link-color: #F9C74F;
+    --link-hover-color: #9B2226;
+    --card-background: rgba(255, 255, 255, 0.9);
     --sidebar-background: rgba(0, 0, 0, 0.7);
-    --border-color: #d9d9d9; /* Couleur de bordure neutre */
-    --header-background: #7F3F3F; /* Rouge Gryffondor pour l'en-tête */
-    --button-background: #F9C74F; /* Or pour les boutons */
-    --button-hover-background: #7F3F3F; /* Rouge pour le survol des boutons */
+    --border-color: #d9d9d9;
+    --header-background: #7F3F3F;
+    --button-background: #F9C74F;
+    --button-hover-background: #7F3F3F;
 }
 
 body {
+    background: url('background-harry-potter.jpg') no-repeat center center fixed;
     font-family: 'Roboto', sans-serif;
     background-color: var(--background-color);
-    color: #D1A24A; /* Couleur de texte inspirée de l'or */
+    color: #D1A24A;
     margin: 0;
     padding: 0;
     display: flex;
@@ -22,46 +23,56 @@ body {
 }
 
 header {
-    background-color: var(--header-background); /* Couleur de fond de l'en-tête */
+    background-color: var(--header-background);
     color: white;
-    padding: 20px;
+    padding: -95%;
     text-align: center;
 }
 
 .lien {
-    padding: 1px; /* Ajustez le remplissage pour agrandir la boîte */
-    background-color: #7F3F3F; /* Couleur de fond pour la boîte de lien */
-    border-radius: 5px; /* Coins arrondis */
-    display: flex; /* Permet de définir la taille de la boîte */
+    position: relative;
+    background-color: #7F3F3F;
+    border-radius: 5px;
+    display: flex;
     text-align: center;
-    font-size: x-large; /* Adjust font size if needed */
+    font-size: x-large;
     text-decoration: none;
     color: #C9B9A5;
-    padding: 5px 10px; /* Adjust padding */
+    padding: 5px;
     align-items: center;
     justify-content: center;
-    width: auto; /* Change to specific width if desired */
+    width: auto;
+    margin-top: -1.5%;
+    z-index: 10;
 }
 
 .lien a {
     color: #F9C74F;
     text-decoration: none;
+    margin: 0 10px;
     transition: color 0.3s;
 }
 
 .lien a:hover {
     color: #F94144;
 }
+
 h1 {
-    margin-top: 10%;
-    color: var(--link-color); /* Couleur du titre */
+    position: fixed;
+    font-size: large;
+    margin-left: 10px;
+    margin-top: -1%; 
+    text-align: left; 
+    color: var(--link-color);
+    opacity: 1;
+    z-index: 11;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     flex: 1;
-    padding: 20px; /* Ajout de remplissage pour un meilleur espacement */
+    padding: 20px;
 }
 
 .exchange-section {
@@ -71,10 +82,10 @@ h1 {
 
 form {
     margin-bottom: 20px;
-    background-color: var(--card-background); /* Utilisation de la variable pour le fond */
+    background-color: var(--card-background);
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Ombre pour le formulaire */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 form label {
@@ -91,7 +102,7 @@ form input, form textarea {
 }
 
 button {
-    background-color: var(--button-background); /* Couleur du bouton */
+    background-color: var(--button-background);
     color: white;
     padding: 10px;
     border: none;
@@ -101,13 +112,13 @@ button {
 }
 
 button:hover {
-    background-color: var(--button-hover-background); /* Couleur au survol */
+    background-color: var(--button-hover-background);
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background-color: var(--header-background); /* Couleur de fond du pied de page */
+    background-color: var(--header-background);
     color: white;
 }
 
@@ -119,7 +130,7 @@ footer {
     width: 150px;
     text-align: center;
     background-color: var(--card-background);
-    border-radius: 8px; /* Coins arrondis pour les cartes */
+    border-radius: 8px;
 }
 
 .card h3 {
@@ -144,50 +155,41 @@ footer {
     cursor: pointer;
 }
 
-
 #darkModeToggle {
-    position: absolute; /* Positionnement absolu */
-    top: 20px; /* Ajustez cette valeur pour déplacer l'icône vers le bas ou vers le haut */
-    right: 20px; /* Ajustez cette valeur pour déplacer l'icône vers la gauche ou vers la droite */
-    z-index: 99; /* Assurez-vous qu'il est au-dessus des autres éléments */
-    width: 40px; /* Largeur de l'icône */
-    height: 40px; /* Hauteur de l'icône */
-    background: transparent; /* Fond transparent */
-    border: none; /* Pas de bordure */
-    cursor: pointer; /* Curseur de pointeur */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin-top: -1%;
+    z-index: 99;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .icon-sun {
-    background-image: url('gryffondor.png'); /* Assurez-vous que le chemin est correct */
-    width: 40px;
-    height: 40px;
+    background-image: url('gryffondor.png');
+    width: 30px;
+    height: 30px;
     background-size: contain;
     display: inline-block;
 }
 
 .icon-moon {
-    background-image: url('slytherin_mode.png'); /* Assurez-vous que le chemin est correct */
-    width: 40px;
-    height: 40px;
+    background-image: url('slytherin_mode.png');
+    width: 30px;
+    height: 30px;
     background-size: contain;
-    display: none; /* Caché par défaut */
+    display: none;
 }
 
 body.slytherin-mode .icon-sun {
-    display: none; /* Cacher l'icône du soleil en mode Slytherin */
+    display: none;
 }
 
 body.slytherin-mode .icon-moon {
-    display: inline-block; /* Afficher l'icône de la lune en mode Slytherin */
-}
-
-.icon-sun .icon-moon {
-    margin-left: 10%;
-    width: 40px;
-    height: 40px;
-    background-size: contain;
     display: inline-block;
-    z-index: 4;
 }
 
 body.dark-mode .icon-sun {
@@ -198,46 +200,60 @@ body.dark-mode .icon-moon {
     display: inline-block;
 }
 
+body.slytherin-mode #characterSelect {
+    background-color: #3A3D3F;
+    color: #A8CBB7;
+}
+
+body.slytherin-mode #characterSelect option {
+    color: #A8CBB7;
+}
+
 #characterCard {
-    display: flex; /* ou grid */
-    flex-wrap: wrap; /* Pour que les cartes s'enroulent */
-    justify-content: center; /* Centrer les cartes */
-    gap: 10px; /* Espacement entre les cartes */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 body.slytherin-mode {
-    background-color: #1a1a1a; /* Fond sombre pour le mode Slytherin */
-    color: #A8CBB7; /* Couleur de texte clair */
+    background-color: #1a1a1a;
+    color: #A8CBB7;
 }
 
 body.slytherin-mode h1 {
-    color: #A8CBB7; /* Couleur claire pour le texte de l'en-tête en mode Slytherin */
+    color: #A8CBB7;
 }
 
 body.slytherin-mode header, 
 body.slytherin-mode nav, 
 body.slytherin-mode .exchange-section {
-    background-color: #3A3D3F; /* Fond sombre pour l'en-tête et la section */
-    border-color: #666; /* Couleur de bordure plus claire */
+    background-color: #3A3D3F;
+    border-color: #666;
 }
 
 body.slytherin-mode .lien a {
-    color: #A8CBB7; /* Couleur des liens en mode Slytherin */
+    color: #A8CBB7;
 }
 
 body.slytherin-mode .lien a:hover {
-    color: #A3D9A5; /* Couleur des liens au survol */
+    color: #A3D9A5;
 }
 
 body.slytherin-mode form {
-    background-color: #2b2b2b; /* Fond du formulaire en mode Slytherin */
+    background-color: #2b2b2b;
 }
 
 body.slytherin-mode button {
-    background-color: #3A3D3F; /* Fond des boutons en mode Slytherin */
-    color: #A8CBB7; /* Couleur du texte des boutons */
+    background-color: #3A3D3F;
+    color: #A8CBB7;
 }
 
 body.slytherin-mode button:hover {
-    background-color: #2b2b2b; /* Fond des boutons au survol */
+    background-color: #2b2b2b;
+}
+
+body.slytherin-mode footer {
+    background-color: #3A3D3F;
+    color: #A8CBB7;
 }

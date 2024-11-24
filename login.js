@@ -3,7 +3,7 @@ function validateForm() {
     const email = document.getElementById('email');
     const mdp = document.getElementById('mdp');
     const mdpConfirm = document.getElementById('mdpConfirm');
-    const captchaInput = document.getElementById('captcha-form'); // Assurez-vous que l'ID correspond à votre champ CAPTCHA
+    const captchaInput = document.getElementById('captcha-form'); 
     const messageDiv = document.getElementById('message');
 
     let passCheck = new RegExp(
@@ -11,9 +11,8 @@ function validateForm() {
 );
 
     let isValid = true;
-    messageDiv.innerHTML = ''; // Réinitialiser le message
+    messageDiv.innerHTML = ''; 
 
-    // Validation du pseudo
     if (pseudo.value.length < 6) {
         pseudo.classList.add('invalid');
         isValid = false;
@@ -23,7 +22,6 @@ function validateForm() {
         pseudo.classList.add('valid');
     }
 
-    // Validation de l'email
     if (!email.validity.valid) {
         email.classList.add('invalid');
         isValid = false;
@@ -33,7 +31,6 @@ function validateForm() {
         email.classList.add('valid');
     }
 
-    // Validation du mot de passe
     if (!passCheck.test(mdp.value.trim())) {
         mdp.classList.add('invalid');
         isValid = false;
@@ -43,21 +40,19 @@ function validateForm() {
         mdp.classList.add('valid');
     }
 
-    // Validation de la vérification du mot de passe
 console.log("Mot de passe : ", mdp.value);
 console.log("Confirmation du mot de passe : ", mdpConfirm.value);
 if (mdp.value !== mdpConfirm.value) {
-    console.log("Validation de la confirmation échouée"); // Ligne de débogage
+    console.log("Validation de la confirmation échouée"); 
     mdpConfirm.classList.add('invalid');
     isValid = false;
     messageDiv.innerHTML += '<p class="error">La vérification du mot de passe ne correspond pas.</p>';
 } else {
-    console.log("Validation de la confirmation réussie"); // Ligne de débogage
+    console.log("Validation de la confirmation réussie"); 
     mdpConfirm.classList.remove('invalid');
     mdpConfirm.classList.add('valid');
 }
     
-    // Validation du captcha
     if (captchaInput.value.trim() === '') {
         captchaInput.classList.add('invalid');
         isValid = false;
@@ -71,7 +66,6 @@ if (mdp.value !== mdpConfirm.value) {
         captchaInput.classList.add('valid');
     }
 
-    // Si tout est valide
     if (isValid) {
         messageDiv.innerHTML = '<p class="success">Formulaire soumis avec succès !</p>';
     }
@@ -128,19 +122,19 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const toggleButton = document.getElementById('darkModeToggle');
     const icon = document.getElementById('icon');
-    const form = document.getElementById('registrationForm'); // Assurez-vous que l'ID est correct
+    const form = document.getElementById('registrationForm'); 
 
     toggleButton.addEventListener('click', () => {
         if (icon.classList.contains('icon-sun')) {
             icon.classList.remove('icon-sun');
             icon.classList.add('icon-moon');
-            document.body.classList.add('slytherin-mode'); // Active le mode Slytherin
-            form.classList.add('slytherin-mode'); // Applique le mode Slytherin au formulaire
+            document.body.classList.add('slytherin-mode'); 
+            form.classList.add('slytherin-mode'); 
         } else {
             icon.classList.remove('icon-moon');
             icon.classList.add('icon-sun');
-            document.body.classList.remove('slytherin-mode'); // Désactive le mode Slytherin
-            form.classList.remove('slytherin-mode'); // Désactive le mode Slytherin pour le formulaire
+            document.body.classList.remove('slytherin-mode'); 
+            form.classList.remove('slytherin-mode'); 
         }
     });
 });

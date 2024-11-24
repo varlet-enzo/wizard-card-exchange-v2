@@ -1,17 +1,17 @@
-let currentIndex = 0; // Index du personnage actuellement affiché
-let characters = []; // Tableau pour stocker les personnages
+let currentIndex = 0; 
+let characters = [];
 
-// Fonction pour ajouter un personnage
+
 function addCharacter(name, house, age, image) {
     characters.push({ name, house, age, image });
 }
 
-// Exemple d'ajout de personnages (décommenter si nécessaire)
+
 addCharacter("Harry Potter", "Gryffondor", 17, "url_image_harry");
 addCharacter("Hermione Granger", "Gryffondor", 17, "url_image_hermione");
 addCharacter("Draco Malfoy", "Slytherin", 17, "url_image_draco");
 
-// Fonction pour afficher le personnage actuel
+
 function showCurrentCharacter() {
     const characterCard = document.getElementById('characterCard');
     if (characters.length > 0) {
@@ -28,7 +28,7 @@ function showCurrentCharacter() {
     }
 }
 
-// Fonction pour remplir le sélecteur de personnages
+
 function populateCharacterSelect() {
     const characterSelect = document.getElementById('characterSelect');
     characterSelect.innerHTML = '';
@@ -40,7 +40,21 @@ function populateCharacterSelect() {
     });
 }
 
-// Appeler la fonction pour récupérer les personnages lors du chargement de la page
+function openTab(support) {
+    const tabContents = document.getElementsByClassName('content');
+    const contents = document.querySelectorAll('.content');
+    contents.forEach(content => {
+        content.classList.remove('active');
+        
+    });
+    
+
+    const activeTab = document.getElementById(support);
+    if (activeTab) {
+        activeTab.classList.add('active');
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const toggleButton = document.getElementById('darkModeToggle');
     const icon = document.getElementById('icon');
@@ -49,11 +63,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (icon.classList.contains('icon-sun')) {
             icon.classList.remove('icon-sun');
             icon.classList.add('icon-moon');
-            document.body.classList.add('slytherin-mode'); // Active le mode Slytherin
+            document.body.classList.add('slytherin-mode'); 
         } else {
             icon.classList.remove('icon-moon');
             icon.classList.add('icon-sun');
-            document.body.classList.remove('slytherin-mode'); // Désactive le mode Slytherin
+            document.body.classList.remove('slytherin-mode'); 
         }
     });
 });
+

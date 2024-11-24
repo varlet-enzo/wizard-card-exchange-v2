@@ -19,6 +19,47 @@ body {
   color: #D1A24A;
 }
 
+.tabs {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color:#7F3F3F;
+  border-bottom: 2px solid #502626;
+  margin-left: 20px; 
+}
+
+.tab {
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tab:hover {
+  background-color: #560f0f;
+}
+
+.tab-active {
+  background-color: #cb6f6f;
+  border: 2px solid #430a0a;
+  border-bottom: none;
+  font-weight: bold;
+}
+
+.content {
+   display: none; 
+    padding: 20px;
+    border: 1px solid #D1A24A;
+    margin: 20px auto; 
+    width: 80%; 
+    max-width: 800px; 
+    text-align: center; 
+}
+
+.content.active {
+    display: block; 
+}
+
 body.dark-mode {
   background-color: #121212;
   color: #ffffff;
@@ -64,15 +105,15 @@ header .dark-mode #toggle-dark-mode {
 }
 
 .card {
-  background-color: #A50034; /* Rouge Gryffondor */
-  color: #FFD700; /* Or */
+  background-color: #A50034; 
+  color: #FFD700; 
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px;
     display: inline-block;
     width: 150px;
     text-align: center;
-    border-radius: 8px; /* Coins arrondis pour un meilleur aspect */
+    border-radius: 8px; 
 }
 
 
@@ -92,17 +133,17 @@ header .dark-mode #toggle-dark-mode {
 .search-form {
   margin: 0;
   padding: 0;
-  display: flex; /* Utilise flexbox pour la barre de recherche */
-  width: 100%; /* Prend toute la largeur du conteneur */
-  justify-content: center; /* Centre la barre de recherche */
-  margin-bottom: 10%; /* Espace en bas de la barre de recherche */
+  display: flex; 
+  width: 100%; 
+  justify-content: center; 
+  margin-bottom: 10%; 
 }
 
 .search-form input {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 70%; /* Largeur de la barre de recherche */
+  width: 70%; 
 }
 
 .lien {
@@ -115,7 +156,7 @@ header .dark-mode #toggle-dark-mode {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -3%; /* Ajout d'un espace au-dessus des liens */
+  margin-top: -3%; 
   z-index: 1;
 }
 
@@ -170,11 +211,11 @@ header .dark-mode #toggle-dark-mode {
   left: 0;
   width: 200px;
   height: 100vh;
-  background-color: #9B2226;
+  background-color: #7F3F3F;
   padding: 10px;
   padding-top: 13%;
-  border-right: 2px solid #d9d9d9;
-  border-bottom: 2px solid #d9d9d9;
+  border-right: 2px solid #F9C74F;
+  border-bottom: 2px solid #F9C74F;
   z-index: 0;
   font-size: 0.9em;
   color: #F9C74F;
@@ -192,7 +233,7 @@ header .dark-mode #toggle-dark-mode {
 #toggle-dark-mode {
   display: block;
   position: relative;
-  top: 0.5%;
+  top: 5%;
   left: 25%;
   z-index: 99;
   width: 40px;
@@ -219,11 +260,11 @@ header .dark-mode #toggle-dark-mode {
 }
 
 .icon-sun, .icon-moon {
-    width: 40px; /* Largeur de l'icône */
-    height: 40px; /* Hauteur de l'icône */
-    background-size: contain; /* Assurez-vous que l'image est contenue */
-    background-repeat: no-repeat; /* Pas de répétition de l'image */
-    display: inline-block; /* S'assurer qu'il est affiché */
+    width: 40px; 
+    height: 40px; 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    display: inline-block; 
 }
 
 body.dark-mode .icon-sun {
@@ -236,10 +277,10 @@ body.dark-mode .icon-moon {
 
 #darkModeToggle {
   margin-bottom: 20px;
-  position: absolute; /* Positionnement absolu */
-  top: 1.5%; /* Ajustez cette valeur */
-  right: 100%; /* Ajustez cette valeur */
-  z-index: 9999; /* Assurez-vous qu'il est au-dessus des autres éléments */
+  position: absolute; 
+  top: 1.5%; 
+  right: 100%; 
+  z-index: 9999; 
 }
 
 #darkModeToggle #icon {
@@ -252,13 +293,13 @@ body.dark-mode .icon-moon {
 }
 
 .container {
-  padding: 20px; /* Ajoutez du remplissage pour voir le fond */
-  border-radius: 10px; /* Coins arrondis pour un meilleur aspect */
-  width: 80%; /* Largeur pour rendre le conteneur visible */
-  max-width: 600px; /* Largeur maximale pour le conteneur */
+  padding: 20px; 
+  border-radius: 10px; 
+  width: 80%; 
+  max-width: 600px; 
   display: flex;
-  flex-direction: column; /* Aligne les éléments verticalement */
-  align-items: center; /* Centre les éléments à l'intérieur du conteneur */
+  flex-direction: column; 
+  align-items: center; 
 }
 
 h1 {
@@ -277,80 +318,97 @@ nav.lien {
 }
 
 body.slytherin-mode {
-    background-color: #1a1a1a; /* Fond sombre pour le mode Slytherin */
-    color: #A8CBB7; /* Couleur de texte clair */
+    background-color: #1a1a1a; 
+    color: #A8CBB7; 
 }
 
 body.slytherin-mode header, 
 body.slytherin-mode nav, 
 body.slytherin-mode .sommaire {
-    background-color: #3A3D3F; /* Fond sombre pour l'en-tête et la barre de navigation */
-    border-color: #666; /* Couleur de bordure plus claire */
+    background-color: #3A3D3F; 
+    border-color: #666; 
 }
 
 body.slytherin-mode .lien {
-    background-color: #3A3D3F; /* Fond pour la barre de liens */
+    background-color: #3A3D3F; 
 }
 
 body.slytherin-mode .lien a {
-    color: #A8CBB7; /* Couleur des liens */
+    color: #A8CBB7; 
 }
 
 body.slytherin-mode .lien a:hover {
-    color: #A3D9A5; /* Couleur des liens au survol */
-    background-color: #444; /* Fond au survol des liens */
+    color: #A3D9A5; 
+    background-color: #444; 
 }body.slytherin-mode .lien {
-    background-color: #3A3D3F; /* Fond pour la barre de liens */
+    background-color: #3A3D3F; 
 }
 
 body.slytherin-mode .lien a {
-    color: #A8CBB7; /* Couleur des liens */
+    color: #A8CBB7; 
 }
 
 body.slytherin-mode .lien a:hover {
-    color: #A3D9A5; /* Couleur des liens au survol */
-    background-color: #444; /* Fond au survol des liens */
+    color: #A3D9A5; 
+    background-color: #444; 
 }
 
 body.slytherin-mode a {
-    color: #A8CBB7; /* Couleur des liens */
+    color: #A8CBB7; 
 }
 
 body.slytherin-mode a:hover {
-    color: #A3D9A5; /* Couleur des liens au survol */
+    color: #A3D9A5; 
 }
 
 body.slytherin-mode .card {
-    background-color: #2b2b2b; /* Fond des cartes */
-    border: 1px solid #666; /* Bordure des cartes */
+    background-color: #2b2b2b; 
+    border: 1px solid #666; 
 }
 
 body.slytherin-mode .card h3 {
-    color: #A8CBB7; /* Couleur du titre des cartes */
+    color: #A8CBB7; 
 }
 
 body.slytherin-mode .card p {
-    color: #D1D1D1; /* Couleur du texte dans les cartes */
+    color: #D1D1D1; 
 }
 
 body.slytherin-mode button {
-    background-color: #3A3D3F; /* Fond des boutons */
-    color: #A8CBB7; /* Couleur du texte des boutons */
+    background-color: #3A3D3F; 
+    color: #A8CBB7; 
 }
 
 body.slytherin-mode button:hover {
-    background-color: #2b2b2b; /* Fond des boutons au survol */
+    background-color: #2b2b2b; 
 }
 
 body.slytherin-mode .booster h2 {
-    color: #c4f0d7; /* Couleur claire pour le mode Slytherin */
-    font-weight: bold; /* Optionnel : rend le texte en gras */
+    color: #c4f0d7; 
+    font-weight: bold; 
 }
 
 body.slytherin-mode h1 {
-    color: #A8CBB7; /* Couleur du texte du titre en mode Slytherin */
+    color: #A8CBB7; 
 }
 
 body.slytherin-mode h2 {
-    color: #5e7267; /* Couleur du texte des sous-titres en mode Slytherin */
+    color: #5e7267; 
+}
+
+body.slytherin-mode .tabs {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color:#2b2b2b;
+  border-bottom: 2px solid #A8CBB7;
+  margin-left: 20px; 
+}
+
+body.slytherin-mode .tab-active {
+  background-color: #262727;
+  border: 2px solid #5e7267;
+  border-bottom: none;
+  font-weight: bold;
 }
