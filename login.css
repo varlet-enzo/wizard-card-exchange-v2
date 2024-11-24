@@ -20,7 +20,7 @@ input#identifiant {
     font-size: x-large;
     text-decoration: none;
     color: #C9B9A5;
-    background-color: #9B2226;
+    background-color: #7F3F3F;
     width: 100%;
     padding: 10px 20px;
     display: flex;
@@ -244,4 +244,3 @@ body.dark-mode .icon-moon {
     top: -8px;
     right: 40%;
 } 
-

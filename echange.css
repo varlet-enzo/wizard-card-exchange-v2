@@ -29,15 +29,18 @@ header {
 }
 
 .lien {
+    padding: 1px; /* Ajustez le remplissage pour agrandir la boîte */
+    background-color: #7F3F3F; /* Couleur de fond pour la boîte de lien */
+    border-radius: 5px; /* Coins arrondis */
+    display: flex; /* Permet de définir la taille de la boîte */
     text-align: center;
-    font-size: large; /* Réduisez la taille de la police si nécessaire */
+    font-size: x-large; /* Adjust font size if needed */
     text-decoration: none;
     color: #C9B9A5;
-    background-color: #7F3F3F; /* Rouge */
-    padding-top: -80%;
-    margin: -90; /* Assurez-vous qu'il n'y a pas de marge supplémentaire */
-    display: inline-block; /* Permet de réduire la taille de la boîte */
-    border-radius: 5px; /* Coins arrondis pour un meilleur aspect */
+    padding: 5px 10px; /* Adjust padding */
+    align-items: center;
+    justify-content: center;
+    width: auto; /* Change to specific width if desired */
 }
 
 .lien a {
