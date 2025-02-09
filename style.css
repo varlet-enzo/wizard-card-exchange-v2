@@ -7,6 +7,17 @@
   --border-color: #d9d9d9;
 }
 
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #A50034; /* Rouge de Gryffondor */
+    color: #FBAE17; /* Or de Gryffondor */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
 body {
   background: url('background-harry-potter.jpg') no-repeat center center fixed;
   backdrop-filter: blur(3px);

@@ -29,6 +29,10 @@ function showCurrentCharacter() {
 }
 
 
+
+
+
+
 function populateCharacterSelect() {
     const characterSelect = document.getElementById('characterSelect');
     characterSelect.innerHTML = '';
